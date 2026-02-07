@@ -47,8 +47,8 @@ const HeroSection = () => {
         }} transition={{
           duration: 0.7
         }}>
-            <span className="inline-flex items-center gap-2 bg-accent/20 text-accent-foreground border border-accent/30 px-4 py-1.5 rounded-full text-sm font-medium mb-6">
-              <CheckCircle className="w-4 h-4 text-accent" />
+            <span className="inline-flex items-center gap-2 bg-primary-foreground/20 text-primary-foreground border border-primary-foreground/30 px-4 py-1.5 rounded-full text-sm font-medium mb-6">
+              <CheckCircle className="w-4 h-4 text-primary-foreground" />
               Licensed & Insured — South Florida's Trusted Movers
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold leading-[1.1] mb-6 text-primary-foreground">Your Miami Move
