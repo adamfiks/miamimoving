@@ -31,11 +31,9 @@ const Header = () => {
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
             
-            <div>
-              <span className={`font-display font-bold text-lg leading-tight block ${scrolled ? "text-foreground" : "text-card"}`}>
-                Miami Moving
-              </span>
-            </div>
+            <span className={`font-display font-extrabold text-xl md:text-2xl tracking-tight ${scrolled ? "text-foreground" : "text-card"}`}>
+              Miami Moving
+            </span>
           </a>
 
           {/* Desktop Nav */}
