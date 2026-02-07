@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Phone, ArrowRight, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
@@ -14,15 +15,28 @@ const HeroSection = () => {
     toLocation: ""
   });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name.trim() || !formData.phone.trim() || !formData.email.trim()) {
       toast.error("Please fill in your name, phone, and email.");
       return;
     }
-    setSubmitted(true);
-    toast.success("Thank you! We'll contact you shortly with your free quote.");
+    setLoading(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("send-quote", {
+        body: formData,
+      });
+      if (error) throw error;
+      setSubmitted(true);
+      toast.success("Thank you! We'll contact you shortly with your free quote.");
+    } catch (err: any) {
+      console.error("Quote submission error:", err);
+      toast.error("Something went wrong. Please call us directly or try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleChange = (field: string, value: string) => {
@@ -116,9 +130,9 @@ const HeroSection = () => {
                     <input placeholder="Moving From" value={formData.fromLocation} onChange={e => handleChange("fromLocation", e.target.value)} className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition" maxLength={200} type="text" />
                     <input type="text" placeholder="Moving To" value={formData.toLocation} onChange={e => handleChange("toLocation", e.target.value)} className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition" maxLength={200} />
                   </div>
-                  <button type="submit" className="w-full flex items-center justify-center gap-2 bg-accent hover:bg-coral-hover text-accent-foreground py-3.5 rounded-lg font-bold text-lg transition-colors shadow-lg">
-                    Get a Free Quote
-                    <ArrowRight className="w-5 h-5" />
+                  <button type="submit" disabled={loading} className="w-full flex items-center justify-center gap-2 bg-accent hover:bg-coral-hover text-accent-foreground py-3.5 rounded-lg font-bold text-lg transition-colors shadow-lg disabled:opacity-60">
+                    {loading ? "Sending…" : "Get a Free Quote"}
+                    {!loading && <ArrowRight className="w-5 h-5" />}
                   </button>
                   <p className="text-center text-xs text-muted-foreground">
                     No obligation. We respect your privacy.
