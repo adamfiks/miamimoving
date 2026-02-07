@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://miamimoving.lovable.app/sitemap.xml
+Sitemap: https://miami-moving.com/sitemap.xml
