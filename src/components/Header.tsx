@@ -11,9 +11,6 @@ const navLinks = [{
   label: "Why Us",
   href: "#why-us"
 }, {
-  label: "Gallery",
-  href: "#gallery"
-}, {
   label: "FAQ",
   href: "#faq"
 }];
