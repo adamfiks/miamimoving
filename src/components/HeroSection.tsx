@@ -51,8 +51,10 @@ const HeroSection = () => {
               <CheckCircle className="w-4 h-4 text-primary-foreground" />
               Licensed & Insured — South Florida's Trusted Movers
             </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold leading-[1.1] mb-6 text-primary-foreground">Your Miami Move
-Handled Right<br />
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold leading-[1.1] mb-6 text-primary-foreground">Your Miami Move,
+ Handled Right
+
+            <br />
               <span className="text-accent">Miami Move</span>
               <br />
               Starts Here
