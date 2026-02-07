@@ -9,12 +9,12 @@ import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
 
 const images = [
-  { src: gallery1, alt: "Professional packing services" },
-  { src: gallery2, alt: "Moving truck at Miami home" },
-  { src: gallery3, alt: "Team carrying furniture" },
-  { src: gallery4, alt: "Organized storage solutions" },
-  { src: gallery5, alt: "Happy family after successful move" },
-  { src: gallery6, alt: "Commercial office relocation" },
+  { src: gallery1, alt: "Miami Moving professional packing services for residential relocation in South Florida" },
+  { src: gallery2, alt: "Miami Moving truck ready for local home move in Brickell Miami FL" },
+  { src: gallery3, alt: "Experienced Miami movers carefully carrying furniture during a residential move" },
+  { src: gallery4, alt: "Secure climate-controlled storage solutions by Miami Moving in Fort Lauderdale area" },
+  { src: gallery5, alt: "Happy family after a stress-free move with Miami Moving company" },
+  { src: gallery6, alt: "Commercial office relocation services in downtown Miami by Miami Moving" },
 ];
 
 const GallerySection = () => {
