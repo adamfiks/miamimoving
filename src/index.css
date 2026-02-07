@@ -24,8 +24,8 @@
     --muted: 210 20% 95%;
     --muted-foreground: 215 15% 45%;
 
-    --accent: 16 85% 55%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 220 10% 82%;
+    --accent-foreground: 215 50% 12%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -48,8 +48,8 @@
     /* Custom tokens */
     --hero-overlay: 207 78% 15%;
     --section-alt: 207 25% 96%;
-    --coral: 16 85% 55%;
-    --coral-hover: 16 85% 48%;
+    --coral: 220 10% 82%;
+    --coral-hover: 220 10% 72%;
     --navy: 215 50% 12%;
     --sky: 200 75% 92%;
     --gold: 42 90% 55%;
@@ -68,8 +68,8 @@
     --secondary-foreground: 210 40% 98%;
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-    --accent: 16 85% 55%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 220 10% 75%;
+    --accent-foreground: 215 50% 12%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
     --border: 217.2 32.6% 17.5%;
