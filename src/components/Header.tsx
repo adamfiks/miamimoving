@@ -1,19 +1,14 @@
 import { useState, useEffect } from "react";
+import { useLocation, Link } from "react-router-dom";
 import { Phone, Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
-const navLinks = [{
-  label: "Services",
-  href: "#services"
-}, {
-  label: "Areas",
-  href: "#areas"
-}, {
-  label: "Why Us",
-  href: "#why-us"
-}, {
-  label: "FAQ",
-  href: "#faq"
-}];
+
+const navLinks = [
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/#services" },
+  { label: "Service Areas", href: "/#areas" },
+  { label: "Why Us", href: "/#why-us" },
+  { label: "FAQ", href: "/#faq" },
+];
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
