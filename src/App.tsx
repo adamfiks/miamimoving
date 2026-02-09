@@ -7,7 +7,9 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Index from "./pages/Index";
 import CityPage from "./pages/CityPage";
+import ServicePage from "./pages/ServicePage";
 import NotFound from "./pages/NotFound";
+import { services as serviceData } from "./data/serviceData";
 
 const queryClient = new QueryClient();
 
