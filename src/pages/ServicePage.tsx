@@ -1,4 +1,4 @@
-import { useParams, Navigate, Link } from "react-router-dom";
+import { Navigate, Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { CheckCircle, ArrowLeft, Shield, Truck, Clock, Package } from "lucide-react";
 import Header from "@/components/Header";
@@ -9,8 +9,9 @@ import { getServiceBySlug, services as allServices } from "@/data/serviceData";
 import { cities } from "@/data/cityData";
 
 const ServicePage = () => {
-  const { slug } = useParams<{ slug: string }>();
-  const service = slug ? getServiceBySlug(slug) : undefined;
+  const location = useLocation();
+  const slug = location.pathname.replace(/^\//, "");
+  const service = getServiceBySlug(slug);
 
   if (!service) return <Navigate to="/" replace />;
 
