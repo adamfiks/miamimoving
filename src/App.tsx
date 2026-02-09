@@ -30,8 +30,10 @@ const App = () => (
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
+          {serviceData.map((s) => (
+            <Route key={s.slug} path={`/${s.slug}`} element={<ServicePage />} />
+          ))}
           <Route path="/:slug" element={<CityPage />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
