@@ -1,19 +1,35 @@
 import { useState, useEffect } from "react";
+import { useLocation, Link } from "react-router-dom";
 import { Phone, Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
-const navLinks = [{
-  label: "Services",
-  href: "#services"
-}, {
-  label: "Areas",
-  href: "#areas"
-}, {
-  label: "Why Us",
-  href: "#why-us"
-}, {
-  label: "FAQ",
-  href: "#faq"
-}];
+
+const navLinks = [
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/#services" },
+  { label: "Service Areas", href: "/#areas" },
+  { label: "Why Us", href: "/#why-us" },
+  { label: "FAQ", href: "/#faq" },
+];
+const NavAnchor = ({ href, className, onClick, children }: { href: string; className: string; onClick?: () => void; children: React.ReactNode }) => {
+  const location = useLocation();
+
+  const handleClick = (e: React.MouseEvent) => {
+    const [path, hash] = href.split("#");
+    const targetPath = path || "/";
+
+    if (location.pathname === targetPath && hash) {
+      e.preventDefault();
+      document.getElementById(hash)?.scrollIntoView({ behavior: "smooth" });
+    }
+    onClick?.();
+  };
+
+  return (
+    <Link to={href} className={className} onClick={handleClick}>
+      {children}
+    </Link>
+  );
+};
+
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -25,24 +41,20 @@ const Header = () => {
   return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-card/95 backdrop-blur-md shadow-lg border-b border-border" : "bg-transparent"}`}>
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
-            
+          <Link to="/" className="flex items-center gap-2">
             <div>
               <span className={`font-display font-bold text-lg leading-tight block ${scrolled ? "text-foreground" : "text-card"}`}>
                 Miami Moving
               </span>
             </div>
-          </a>
+          </Link>
 
-          {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-1">
-            {navLinks.map(link => <a key={link.href} href={link.href} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${scrolled ? "text-foreground hover:bg-muted" : "text-card/80 hover:text-card hover:bg-card/10"}`}>
+            {navLinks.map(link => <NavAnchor key={link.href} href={link.href} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${scrolled ? "text-foreground hover:bg-muted" : "text-card/80 hover:text-card hover:bg-card/10"}`}>
                 {link.label}
-              </a>)}
+              </NavAnchor>)}
           </nav>
 
-          {/* CTA */}
           <div className="flex items-center gap-3">
             <a href="tel:+17865640471" className="hidden sm:flex items-center gap-2 bg-accent text-accent-foreground px-4 py-2.5 rounded-lg font-semibold text-sm hover:bg-coral-hover transition-colors animate-pulse-glow">
               <Phone className="w-4 h-4" />
@@ -58,15 +70,14 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {mobileOpen && <div className="md:hidden bg-card/95 backdrop-blur-md border-t border-border">
           <nav className="flex flex-col p-4 gap-1">
-            {navLinks.map(link => <a key={link.href} href={link.href} onClick={() => setMobileOpen(false)} className="px-4 py-3 rounded-lg text-foreground font-medium hover:bg-muted transition-colors">
+            {navLinks.map(link => <NavAnchor key={link.href} href={link.href} onClick={() => setMobileOpen(false)} className="px-4 py-3 rounded-lg text-foreground font-medium hover:bg-muted transition-colors">
                 {link.label}
-              </a>)}
-            <a href="#quote" onClick={() => setMobileOpen(false)} className="mt-2 px-4 py-3 rounded-lg bg-primary text-primary-foreground font-semibold text-center hover:opacity-90 transition-opacity">
+              </NavAnchor>)}
+            <NavAnchor href="/#quote" onClick={() => setMobileOpen(false)} className="mt-2 px-4 py-3 rounded-lg bg-primary text-primary-foreground font-semibold text-center hover:opacity-90 transition-opacity">
               Get a Free Quote
-            </a>
+            </NavAnchor>
           </nav>
         </div>}
     </header>;
