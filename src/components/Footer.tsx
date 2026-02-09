@@ -4,14 +4,7 @@ import { cities } from "@/data/cityData";
 
 const footerCities = cities.slice(0, 8);
 
-const services = [
-  "Local Moving",
-  "Long Distance Moving",
-  "Commercial Moving",
-  "Packing & Unpacking",
-  "Residential Moving",
-  "Storage Solutions",
-];
+import { services as serviceList } from "@/data/serviceData";
 
 const Footer = () => {
   return (
