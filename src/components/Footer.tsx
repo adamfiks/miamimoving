@@ -1,15 +1,8 @@
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Link } from "react-router-dom";
+import { cities } from "@/data/cityData";
 
-const serviceAreas = [
-  "Miami",
-  "Miami Beach",
-  "Fort Lauderdale",
-  "Boca Raton",
-  "Hollywood",
-  "Aventura",
-  "West Palm Beach",
-  "Hallandale Beach",
-];
+const footerCities = cities.slice(0, 8);
 
 const services = [
   "Local Moving",
@@ -87,14 +80,14 @@ const Footer = () => {
           <div>
             <h3 className="font-display font-bold text-lg mb-4">Service Areas</h3>
             <ul className="space-y-2.5">
-              {serviceAreas.map((area) => (
-                <li key={area}>
-                  <a
-                    href="#areas"
+              {footerCities.map((city) => (
+                <li key={city.slug}>
+                  <Link
+                    to={`/${city.slug}`}
                     className="text-primary-foreground/60 hover:text-accent transition-colors text-sm"
                   >
-                    {area}
-                  </a>
+                    {city.name}
+                  </Link>
                 </li>
               ))}
             </ul>

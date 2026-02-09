@@ -1,20 +1,7 @@
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
-
-const areas = [
-  "Miami",
-  "Miami Beach",
-  "Fort Lauderdale",
-  "Boca Raton",
-  "Hollywood",
-  "Hallandale Beach",
-  "Aventura",
-  "North Miami",
-  "North Miami Beach",
-  "Sunny Isles Beach",
-  "Ojus",
-  "West Palm Beach",
-];
+import { Link } from "react-router-dom";
+import { cities } from "@/data/cityData";
 
 const ServiceAreasSection = () => {
   return (
@@ -69,21 +56,25 @@ const ServiceAreasSection = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="grid grid-cols-2 gap-3">
-              {areas.map((area, index) => (
+              {cities.map((city, index) => (
                 <motion.div
-                  key={area}
+                  key={city.slug}
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
-                  className="flex items-center gap-3 bg-card rounded-xl px-4 py-3.5 border border-border hover:border-primary/30 hover:shadow-md transition-all"
                 >
-                  <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-4 h-4 text-primary" />
-                  </div>
-                  <span className="font-medium text-card-foreground text-sm">
-                    {area}
-                  </span>
+                  <Link
+                    to={`/${city.slug}`}
+                    className="flex items-center gap-3 bg-card rounded-xl px-4 py-3.5 border border-border hover:border-primary/30 hover:shadow-md transition-all"
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-4 h-4 text-primary" />
+                    </div>
+                    <span className="font-medium text-card-foreground text-sm">
+                      {city.name}
+                    </span>
+                  </Link>
                 </motion.div>
               ))}
             </div>
