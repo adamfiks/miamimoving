@@ -11,6 +11,8 @@ import ServicePage from "./pages/ServicePage";
 import NotFound from "./pages/NotFound";
 import { services as serviceData } from "./data/serviceData";
 
+const serviceSlugs = new Set(serviceData.map((s) => s.slug));
+
 const queryClient = new QueryClient();
 
 const ScrollToTop = () => {
