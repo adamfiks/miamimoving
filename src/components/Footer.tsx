@@ -4,14 +4,7 @@ import { cities } from "@/data/cityData";
 
 const footerCities = cities.slice(0, 8);
 
-const services = [
-  "Local Moving",
-  "Long Distance Moving",
-  "Commercial Moving",
-  "Packing & Unpacking",
-  "Residential Moving",
-  "Storage Solutions",
-];
+import { services as serviceList } from "@/data/serviceData";
 
 const Footer = () => {
   return (
@@ -63,14 +56,14 @@ const Footer = () => {
           <div>
             <h3 className="font-display font-bold text-lg mb-4">Services</h3>
             <ul className="space-y-2.5">
-              {services.map((service) => (
-                <li key={service}>
-                  <a
-                    href="#services"
+              {serviceList.map((service) => (
+                <li key={service.slug}>
+                  <Link
+                    to={`/${service.slug}`}
                     className="text-primary-foreground/60 hover:text-accent transition-colors text-sm"
                   >
-                    {service}
-                  </a>
+                    {service.title}
+                  </Link>
                 </li>
               ))}
             </ul>

@@ -9,6 +9,7 @@ const navLinks = [
   { label: "Why Us", href: "/#why-us" },
   { label: "FAQ", href: "/#faq" },
 ];
+
 const NavAnchor = ({ href, className, onClick, children }: { href: string; className: string; onClick?: () => void; children: React.ReactNode }) => {
   const location = useLocation();
 
