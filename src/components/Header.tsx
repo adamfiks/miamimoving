@@ -103,6 +103,73 @@ const DropdownNav = ({
   );
 };
 
+const MobileMenu = ({ onClose }: { onClose: () => void }) => {
+  const [expanded, setExpanded] = useState<string | null>(null);
+
+  const toggle = (label: string) => {
+    setExpanded((prev) => (prev === label ? null : label));
+  };
+
+  return (
+    <div className="md:hidden bg-card/95 backdrop-blur-md border-t border-border max-h-[80vh] overflow-y-auto">
+      <nav className="flex flex-col p-4 gap-1">
+        {navLinks.map((link) => {
+          if (link.dropdown) {
+            const isOpen = expanded === link.label;
+            return (
+              <div key={link.href}>
+                <button
+                  onClick={() => toggle(link.label)}
+                  className="w-full flex items-center justify-between px-4 py-3 rounded-lg text-foreground font-medium hover:bg-muted transition-colors"
+                >
+                  {link.label}
+                  <ChevronDown
+                    className={`w-4 h-4 opacity-60 transition-transform duration-200 ${
+                      isOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+                {isOpen && (
+                  <div className="ml-4 flex flex-col gap-0.5 mt-1 mb-1">
+                    {link.dropdown.map((item) => (
+                      <Link
+                        key={item.href}
+                        to={item.href}
+                        onClick={onClose}
+                        className="px-4 py-2.5 rounded-lg text-sm text-foreground/80 hover:bg-muted transition-colors"
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          }
+
+          return (
+            <NavAnchor
+              key={link.href}
+              href={link.href}
+              onClick={onClose}
+              className="px-4 py-3 rounded-lg text-foreground font-medium hover:bg-muted transition-colors"
+            >
+              {link.label}
+            </NavAnchor>
+          );
+        })}
+        <NavAnchor
+          href="/#quote"
+          onClick={onClose}
+          className="mt-2 px-4 py-3 rounded-lg bg-primary text-primary-foreground font-semibold text-center hover:opacity-90 transition-opacity"
+        >
+          Get a Free Quote
+        </NavAnchor>
+      </nav>
+    </div>
+  );
+};
+
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
