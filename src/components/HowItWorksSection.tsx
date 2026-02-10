@@ -44,8 +44,12 @@ const HowItWorksSection = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-6 relative">
-          {/* Desktop connector line */}
-          <div className="hidden md:block absolute top-12 left-[12.5%] right-[12.5%] h-px bg-border" />
+          {/* Desktop connector lines between icons */}
+          <div className="hidden md:block absolute top-12 left-[calc(25%-12px)] w-[calc(50%+24px)] h-px">
+            <div className="absolute left-0 right-[66.66%] top-0 h-px bg-border ml-[calc(48px+8px)] mr-[calc(48px+8px)]" />
+            <div className="absolute left-[33.33%] right-[33.33%] top-0 h-px bg-border ml-[calc(48px+8px)] mr-[calc(48px+8px)]" />
+            <div className="absolute left-[66.66%] right-0 top-0 h-px bg-border ml-[calc(48px+8px)] mr-[calc(48px+8px)]" />
+          </div>
 
           {steps.map((step, index) => (
             <motion.div
