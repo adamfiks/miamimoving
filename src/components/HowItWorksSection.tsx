@@ -36,7 +36,7 @@ const HowItWorksSection = () => {
           className="text-center mb-16"
         >
           <span className="text-accent font-semibold text-sm tracking-wider uppercase">
-            Simple Process
+            Moving Made Simple
           </span>
           <h2 className="font-display font-extrabold text-3xl md:text-4xl text-foreground mt-2 mb-4">
             How It Works
