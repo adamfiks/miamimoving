@@ -131,10 +131,9 @@ input[type="date"]::-webkit-date-and-time-value {
   text-align: left;
 }
 
-/* Desktop only: hide native date placeholder text when no value is set */
+/* Desktop only: hide native date format hint when empty so custom placeholder shows */
 @media (min-width: 768px) {
-  input[type="date"]:not(:focus):invalid::-webkit-datetime-edit,
-  input[type="date"][value=""]:not(:focus)::-webkit-datetime-edit {
+  input[type="date"].date-empty::-webkit-datetime-edit {
     color: transparent;
   }
 }
