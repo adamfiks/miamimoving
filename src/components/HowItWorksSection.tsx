@@ -44,14 +44,14 @@ const HowItWorksSection = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-6 relative">
-          {/* Desktop connector lines between icons (not through them) */}
+          {/* Desktop connector lines between icons */}
           {[0, 1, 2].map((i) => (
             <div
               key={i}
               className="hidden md:block absolute top-12 h-px bg-border"
               style={{
-                left: `calc(${(i + 1) * 25}% - ${12 - 48}px)`,
-                right: `calc(${(2 - i) * 25}% + ${48 - 12}px)`,
+                left: `calc(${i * 25 + 12.5}% + 56px)`,
+                right: `calc(${(2 - i) * 25 + 12.5}% + 56px)`,
               }}
             />
           ))}
