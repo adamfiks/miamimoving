@@ -12,7 +12,8 @@ const HeroSection = () => {
     email: "",
     moveDate: "",
     fromLocation: "",
-    toLocation: ""
+    toLocation: "",
+    website: ""
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);

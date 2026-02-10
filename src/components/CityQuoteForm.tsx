@@ -16,6 +16,7 @@ const CityQuoteForm = ({ cityName }: CityQuoteFormProps) => {
     moveDate: "",
     fromLocation: "",
     toLocation: "",
+    website: "",
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
