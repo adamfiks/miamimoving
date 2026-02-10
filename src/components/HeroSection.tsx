@@ -107,7 +107,7 @@ const HeroSection = () => {
                 Get Your Free Quote
               </h2>
               <p className="text-muted-foreground text-sm mb-6">
-                Fill out the form and we'll call you within 15 minutes.
+                Share a few details about your move and our team will take it from there.
               </p>
 
               {submitted ? (
