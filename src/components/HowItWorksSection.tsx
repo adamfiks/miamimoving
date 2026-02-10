@@ -36,7 +36,7 @@ const HowItWorksSection = () => {
           className="text-center mb-16"
         >
           <span className="text-accent font-semibold text-sm tracking-wider uppercase">
-            Simple Process
+            Moving Made Simple
           </span>
           <h2 className="font-display font-extrabold text-3xl md:text-4xl text-foreground mt-2 mb-4">
             How It Works
@@ -44,8 +44,17 @@ const HowItWorksSection = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-6 relative">
-          {/* Desktop connector line */}
-          <div className="hidden md:block absolute top-12 left-[12.5%] right-[12.5%] h-px bg-border" />
+          {/* Desktop connector lines between icons */}
+          {[0, 1, 2].map((i) => (
+            <div
+              key={i}
+              className="hidden md:block absolute top-12 h-px bg-border"
+              style={{
+                left: `calc(${i * 25 + 12.5}% + 56px)`,
+                right: `calc(${(2 - i) * 25 + 12.5}% + 56px)`,
+              }}
+            />
+          ))}
 
           {steps.map((step, index) => (
             <motion.div
