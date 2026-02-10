@@ -107,7 +107,7 @@ const HeroSection = () => {
                 Get Your Free Quote
               </h2>
               <p className="text-muted-foreground text-sm mb-6">
-                Fill out the form and we'll call you within 15 minutes.
+                Share a few details about your move and our team will take it from there.
               </p>
 
               {submitted ? (
@@ -116,10 +116,9 @@ const HeroSection = () => {
                   <h3 className="font-display font-bold text-xl text-card-foreground mb-2">
                     Quote Request Received!
                   </h3>
-                  <p className="text-muted-foreground">
-                    Our team will contact you shortly at{" "}
-                    <strong>{formData.phone}</strong>.
-                  </p>
+                   <p className="text-muted-foreground">
+                     Our team will review your moving details and reach out shortly.
+                   </p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
