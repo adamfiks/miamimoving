@@ -18,6 +18,14 @@ interface QuoteRequest {
   toLocation?: string;
 }
 
+const escapeHtml = (str: string): string =>
+  str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+
 const handler = async (req: Request): Promise<Response> => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
@@ -33,19 +41,26 @@ const handler = async (req: Request): Promise<Response> => {
       );
     }
 
+    const safeName = escapeHtml(name.slice(0, 100));
+    const safePhone = escapeHtml(phone.replace(/[^\d\s\-\+\(\)\.]/g, "").slice(0, 20));
+    const safeEmail = escapeHtml(email.slice(0, 255));
+    const safeMoveDate = moveDate ? escapeHtml(moveDate.slice(0, 20)) : "";
+    const safeFrom = fromLocation ? escapeHtml(fromLocation.slice(0, 200)) : "";
+    const safeTo = toLocation ? escapeHtml(toLocation.slice(0, 200)) : "";
+
     const emailResponse = await resend.emails.send({
       from: "Miami Moving Quote <info@miami-moving.com>",
       to: ["info@miami-moving.com"],
-      subject: `New Quote Request from ${name}`,
+      subject: `New Quote Request from ${safeName}`,
       html: `
         <h2>New Moving Quote Request</h2>
         <table style="border-collapse:collapse;width:100%;max-width:500px;">
-          <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee;">Name</td><td style="padding:8px;border-bottom:1px solid #eee;">${name}</td></tr>
-          <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee;">Phone</td><td style="padding:8px;border-bottom:1px solid #eee;"><a href="tel:${phone}">${phone}</a></td></tr>
-          <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee;">Email</td><td style="padding:8px;border-bottom:1px solid #eee;"><a href="mailto:${email}">${email}</a></td></tr>
-          ${moveDate ? `<tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee;">Move Date</td><td style="padding:8px;border-bottom:1px solid #eee;">${moveDate}</td></tr>` : ""}
-          ${fromLocation ? `<tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee;">Moving From</td><td style="padding:8px;border-bottom:1px solid #eee;">${fromLocation}</td></tr>` : ""}
-          ${toLocation ? `<tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee;">Moving To</td><td style="padding:8px;border-bottom:1px solid #eee;">${toLocation}</td></tr>` : ""}
+          <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee;">Name</td><td style="padding:8px;border-bottom:1px solid #eee;">${safeName}</td></tr>
+          <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee;">Phone</td><td style="padding:8px;border-bottom:1px solid #eee;"><a href="tel:${safePhone}">${safePhone}</a></td></tr>
+          <tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee;">Email</td><td style="padding:8px;border-bottom:1px solid #eee;"><a href="mailto:${safeEmail}">${safeEmail}</a></td></tr>
+          ${safeMoveDate ? `<tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee;">Move Date</td><td style="padding:8px;border-bottom:1px solid #eee;">${safeMoveDate}</td></tr>` : ""}
+          ${safeFrom ? `<tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee;">Moving From</td><td style="padding:8px;border-bottom:1px solid #eee;">${safeFrom}</td></tr>` : ""}
+          ${safeTo ? `<tr><td style="padding:8px;font-weight:bold;border-bottom:1px solid #eee;">Moving To</td><td style="padding:8px;border-bottom:1px solid #eee;">${safeTo}</td></tr>` : ""}
         </table>
         <p style="color:#888;font-size:12px;margin-top:20px;">Sent from the Miami Moving website quote form.</p>
       `,
