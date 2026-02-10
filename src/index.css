@@ -117,3 +117,16 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Normalize date inputs across browsers */
+input[type="date"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+input[type="date"]::-webkit-date-and-time-value {
+  text-align: left;
+}
