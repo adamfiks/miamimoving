@@ -41,6 +41,9 @@ const NavAnchor = ({
     if (location.pathname === targetPath && hash) {
       e.preventDefault();
       document.getElementById(hash)?.scrollIntoView({ behavior: "smooth" });
+    } else if (location.pathname === "/" && href === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
     onClick?.();
   };
