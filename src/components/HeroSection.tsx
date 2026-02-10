@@ -12,7 +12,8 @@ const HeroSection = () => {
     email: "",
     moveDate: "",
     fromLocation: "",
-    toLocation: ""
+    toLocation: "",
+    website: ""
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -125,11 +126,17 @@ const HeroSection = () => {
                   <input type="text" value={formData.name} onChange={e => handleChange("name", e.target.value)} className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition" required maxLength={100} placeholder="Your Name" />
                   <input type="tel" value={formData.phone} onChange={e => handleChange("phone", e.target.value)} className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition" required maxLength={20} placeholder="Phone Number" />
                   <input type="email" value={formData.email} onChange={e => handleChange("email", e.target.value)} className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition" required maxLength={255} placeholder="Email Address" />
-                  <input type="date" placeholder="Preferred Move Date" value={formData.moveDate} onChange={e => handleChange("moveDate", e.target.value)} className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition" />
+                  <div className="relative">
+                    <input type="date" value={formData.moveDate} onChange={e => handleChange("moveDate", e.target.value)} className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition min-h-[48px]" />
+                    {!formData.moveDate && (
+                      <span className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground pointer-events-none">Moving Date</span>
+                    )}
+                  </div>
                   <div className="grid grid-cols-2 gap-3">
                     <input placeholder="Moving From" value={formData.fromLocation} onChange={e => handleChange("fromLocation", e.target.value)} className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition" maxLength={200} type="text" />
                     <input type="text" placeholder="Moving To" value={formData.toLocation} onChange={e => handleChange("toLocation", e.target.value)} className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition" maxLength={200} />
                   </div>
+                  <input type="text" name="website" value={formData.website} onChange={e => handleChange("website", e.target.value)} className="absolute opacity-0 pointer-events-none h-0 w-0" tabIndex={-1} autoComplete="off" aria-hidden="true" />
                   <button type="submit" disabled={loading} className="w-full flex items-center justify-center gap-2 bg-accent hover:bg-coral-hover text-accent-foreground py-3.5 rounded-lg font-bold text-lg transition-colors shadow-lg disabled:opacity-60">
                     {loading ? "Sending…" : "Get a Free Quote"}
                     {!loading && <ArrowRight className="w-5 h-5" />}

@@ -1,51 +1,6 @@
 import { motion } from "framer-motion";
-import {
-  Truck,
-  MapPin,
-  Building2,
-  Package,
-  Home,
-  Warehouse,
-} from "lucide-react";
-
-const services = [
-  {
-    icon: Truck,
-    title: "Local Moving",
-    description:
-      "Fast, reliable local moves within Miami-Dade, Broward, and Palm Beach counties. Same-day availability.",
-  },
-  {
-    icon: MapPin,
-    title: "Long Distance",
-    description:
-      "Cross-state and interstate moving with full tracking, insurance, and on-time delivery guarantees.",
-  },
-  {
-    icon: Building2,
-    title: "Commercial Moving",
-    description:
-      "Minimize business downtime with our efficient office and commercial relocation services.",
-  },
-  {
-    icon: Package,
-    title: "Packing & Unpacking",
-    description:
-      "Professional packing with premium materials. We handle fragile items, artwork, and electronics.",
-  },
-  {
-    icon: Home,
-    title: "Residential Moving",
-    description:
-      "From studios to mansions — we treat your home and belongings with the utmost care.",
-  },
-  {
-    icon: Warehouse,
-    title: "Storage Solutions",
-    description:
-      "Secure, climate-controlled short-term and long-term storage at competitive rates.",
-  },
-];
+import { Link } from "react-router-dom";
+import { services } from "@/data/serviceData";
 
 const ServicesSection = () => {
   return (
@@ -73,22 +28,26 @@ const ServicesSection = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <motion.div
-              key={service.title}
+              key={service.slug}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="group bg-card rounded-2xl border border-border p-8 hover:shadow-xl hover:border-primary/30 transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
-                <service.icon className="w-7 h-7 text-primary" />
-              </div>
-              <h3 className="font-display font-bold text-xl text-card-foreground mb-3">
-                {service.title}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {service.description}
-              </p>
+              <Link
+                to={`/${service.slug}`}
+                className="group block bg-card rounded-2xl border border-border p-8 hover:shadow-xl hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 h-full"
+              >
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+                  <service.icon className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="font-display font-bold text-xl text-card-foreground mb-3">
+                  {service.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {service.shortDescription}
+                </p>
+              </Link>
             </motion.div>
           ))}
         </div>
