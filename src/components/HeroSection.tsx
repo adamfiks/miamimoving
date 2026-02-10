@@ -12,7 +12,8 @@ const HeroSection = () => {
     email: "",
     moveDate: "",
     fromLocation: "",
-    toLocation: ""
+    toLocation: "",
+    website: ""
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -130,6 +131,7 @@ const HeroSection = () => {
                     <input placeholder="Moving From" value={formData.fromLocation} onChange={e => handleChange("fromLocation", e.target.value)} className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition" maxLength={200} type="text" />
                     <input type="text" placeholder="Moving To" value={formData.toLocation} onChange={e => handleChange("toLocation", e.target.value)} className="w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition" maxLength={200} />
                   </div>
+                  <input type="text" name="website" value={formData.website} onChange={e => handleChange("website", e.target.value)} className="absolute opacity-0 pointer-events-none h-0 w-0" tabIndex={-1} autoComplete="off" aria-hidden="true" />
                   <button type="submit" disabled={loading} className="w-full flex items-center justify-center gap-2 bg-accent hover:bg-coral-hover text-accent-foreground py-3.5 rounded-lg font-bold text-lg transition-colors shadow-lg disabled:opacity-60">
                     {loading ? "Sending…" : "Get a Free Quote"}
                     {!loading && <ArrowRight className="w-5 h-5" />}
