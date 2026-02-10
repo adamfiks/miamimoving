@@ -170,27 +170,7 @@ const Header = () => {
       </div>
 
       {mobileOpen && (
-        <div className="md:hidden bg-card/95 backdrop-blur-md border-t border-border">
-          <nav className="flex flex-col p-4 gap-1">
-            {navLinks.map((link) => (
-              <NavAnchor
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className="px-4 py-3 rounded-lg text-foreground font-medium hover:bg-muted transition-colors"
-              >
-                {link.label}
-              </NavAnchor>
-            ))}
-            <NavAnchor
-              href="/#quote"
-              onClick={() => setMobileOpen(false)}
-              className="mt-2 px-4 py-3 rounded-lg bg-primary text-primary-foreground font-semibold text-center hover:opacity-90 transition-opacity"
-            >
-              Get a Free Quote
-            </NavAnchor>
-          </nav>
-        </div>
+        <MobileMenu onClose={() => setMobileOpen(false)} />
       )}
     </header>
   );
