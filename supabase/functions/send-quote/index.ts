@@ -3,10 +3,20 @@ import { Resend } from "npm:resend@2.0.0";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers":
-    "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
+const ALLOWED_ORIGINS = [
+  "https://miami-moving.com",
+  "https://www.miami-moving.com",
+  "https://miamimoving.lovable.app",
+  "https://id-preview--20ad233c-7377-40a0-b7d8-93642dbf1bed.lovable.app",
+];
+
+const getCorsHeaders = (req: Request) => {
+  const origin = req.headers.get("origin") || "";
+  return {
+    "Access-Control-Allow-Origin": ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0],
+    "Access-Control-Allow-Headers":
+      "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
+  };
 };
 
 interface QuoteRequest {
@@ -47,8 +57,10 @@ const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const PHONE_REGEX = /^[\d\s\-\+\(\)\.]+$/;
 
 const handler = async (req: Request): Promise<Response> => {
+  const cors = getCorsHeaders(req);
+
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders });
+    return new Response(null, { headers: cors });
   }
 
   try {
@@ -61,7 +73,7 @@ const handler = async (req: Request): Promise<Response> => {
     if (isRateLimited(ip)) {
       return new Response(
         JSON.stringify({ error: "Too many requests. Please try again later." }),
-        { status: 429, headers: { "Content-Type": "application/json", ...corsHeaders } }
+        { status: 429, headers: { "Content-Type": "application/json", ...cors } }
       );
     }
 
@@ -69,10 +81,9 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Honeypot check — bots will fill this hidden field
     if (website) {
-      // Silently accept to not tip off bots, but don't send email
       return new Response(JSON.stringify({ success: true }), {
         status: 200,
-        headers: { "Content-Type": "application/json", ...corsHeaders },
+        headers: { "Content-Type": "application/json", ...cors },
       });
     }
 
@@ -80,7 +91,7 @@ const handler = async (req: Request): Promise<Response> => {
     if (!name?.trim() || !phone?.trim() || !email?.trim()) {
       return new Response(
         JSON.stringify({ error: "Name, phone, and email are required." }),
-        { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } }
+        { status: 400, headers: { "Content-Type": "application/json", ...cors } }
       );
     }
 
@@ -88,7 +99,7 @@ const handler = async (req: Request): Promise<Response> => {
     if (!EMAIL_REGEX.test(email.trim())) {
       return new Response(
         JSON.stringify({ error: "Please provide a valid email address." }),
-        { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } }
+        { status: 400, headers: { "Content-Type": "application/json", ...cors } }
       );
     }
 
@@ -96,7 +107,7 @@ const handler = async (req: Request): Promise<Response> => {
     if (!PHONE_REGEX.test(phone.trim())) {
       return new Response(
         JSON.stringify({ error: "Please provide a valid phone number." }),
-        { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } }
+        { status: 400, headers: { "Content-Type": "application/json", ...cors } }
       );
     }
 
@@ -130,13 +141,13 @@ const handler = async (req: Request): Promise<Response> => {
 
     return new Response(JSON.stringify({ success: true }), {
       status: 200,
-      headers: { "Content-Type": "application/json", ...corsHeaders },
+      headers: { "Content-Type": "application/json", ...cors },
     });
   } catch (error: any) {
     console.error("Error sending quote email:", error);
     return new Response(
       JSON.stringify({ error: error.message }),
-      { status: 500, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      { status: 500, headers: { "Content-Type": "application/json", ...cors } }
     );
   }
 };
