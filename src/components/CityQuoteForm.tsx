@@ -102,9 +102,9 @@ const CityQuoteForm = ({ cityName }: CityQuoteFormProps) => {
                   <h3 className="font-display font-bold text-xl text-card-foreground mb-2">
                     Quote Request Received!
                   </h3>
-                  <p className="text-muted-foreground">
-                    Our team will contact you shortly at <strong>{formData.phone}</strong>.
-                  </p>
+                   <p className="text-muted-foreground">
+                     Our team will review your moving details and reach out shortly.
+                   </p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
