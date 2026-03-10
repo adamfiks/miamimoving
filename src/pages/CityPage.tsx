@@ -21,6 +21,30 @@ const CityPage = () => {
         title={city.metaTitle}
         description={city.metaDescription}
         canonical={`https://miami-moving.com/${city.slug}`}
+        breadcrumbs={[
+          { name: "Home", url: "https://miami-moving.com/" },
+          { name: `${city.name} Movers`, url: `https://miami-moving.com/${city.slug}` },
+        ]}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "MovingCompany",
+          "name": `Miami Moving — ${city.name}`,
+          "description": city.metaDescription,
+          "url": `https://miami-moving.com/${city.slug}`,
+          "telephone": "+1-786-564-0471",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1221 Brickell Ave, Suite 900",
+            "addressLocality": "Miami",
+            "addressRegion": "FL",
+            "postalCode": "33131",
+            "addressCountry": "US",
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": city.name,
+          },
+        }}
       />
       <Header />
       <main>
