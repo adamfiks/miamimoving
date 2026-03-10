@@ -1,13 +1,27 @@
 import { useEffect } from "react";
 
+interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
+
 interface SEOHeadProps {
   title: string;
   description: string;
   canonical: string;
   ogImage?: string;
+  breadcrumbs?: BreadcrumbItem[];
+  jsonLd?: Record<string, unknown>;
 }
 
-const SEOHead = ({ title, description, canonical, ogImage = "https://miami-moving.com/og-image.png" }: SEOHeadProps) => {
+const SEOHead = ({
+  title,
+  description,
+  canonical,
+  ogImage = "https://miami-moving.com/og-image.png",
+  breadcrumbs,
+  jsonLd,
+}: SEOHeadProps) => {
   useEffect(() => {
     document.title = title;
 
@@ -38,11 +52,49 @@ const SEOHead = ({ title, description, canonical, ogImage = "https://miami-movin
     }
     link.setAttribute("href", canonical);
 
+    // Breadcrumb JSON-LD
+    const breadcrumbScriptId = "seo-breadcrumb-jsonld";
+    let breadcrumbScript = document.getElementById(breadcrumbScriptId) as HTMLScriptElement | null;
+    if (breadcrumbs && breadcrumbs.length > 0) {
+      const breadcrumbLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: breadcrumbs.map((item, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: item.name,
+          item: item.url,
+        })),
+      };
+      if (!breadcrumbScript) {
+        breadcrumbScript = document.createElement("script");
+        breadcrumbScript.id = breadcrumbScriptId;
+        breadcrumbScript.type = "application/ld+json";
+        document.head.appendChild(breadcrumbScript);
+      }
+      breadcrumbScript.textContent = JSON.stringify(breadcrumbLd);
+    }
+
+    // Additional JSON-LD
+    const extraScriptId = "seo-extra-jsonld";
+    let extraScript = document.getElementById(extraScriptId) as HTMLScriptElement | null;
+    if (jsonLd) {
+      if (!extraScript) {
+        extraScript = document.createElement("script");
+        extraScript.id = extraScriptId;
+        extraScript.type = "application/ld+json";
+        document.head.appendChild(extraScript);
+      }
+      extraScript.textContent = JSON.stringify(jsonLd);
+    }
+
     return () => {
-      // Reset to defaults on unmount
       document.title = "Miami Moving | Professional Movers in Miami & South Florida";
+      // Clean up dynamic JSON-LD
+      document.getElementById(breadcrumbScriptId)?.remove();
+      document.getElementById(extraScriptId)?.remove();
     };
-  }, [title, description, canonical, ogImage]);
+  }, [title, description, canonical, ogImage, breadcrumbs, jsonLd]);
 
   return null;
 };
