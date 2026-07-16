@@ -5,7 +5,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CityQuoteForm from "@/components/CityQuoteForm";
 import SEOHead from "@/components/SEOHead";
-import { getCityBySlug, cities } from "@/data/cityData";
+import { getCityBySlug, getCityFaqs, cities } from "@/data/cityData";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const CityPage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -14,6 +15,7 @@ const CityPage = () => {
   if (!city) return <Navigate to="/" replace />;
 
   const otherCities = cities.filter((c) => c.slug !== city.slug).slice(0, 6);
+  const faqs = getCityFaqs(city);
 
   return (
     <>
@@ -25,26 +27,37 @@ const CityPage = () => {
           { name: "Home", url: "https://miami-moving.com/" },
           { name: `${city.name} Movers`, url: `https://miami-moving.com/${city.slug}` },
         ]}
-        jsonLd={{
-          "@context": "https://schema.org",
-          "@type": "MovingCompany",
-          "name": `Miami Moving — ${city.name}`,
-          "description": city.metaDescription,
-          "url": `https://miami-moving.com/${city.slug}`,
-          "telephone": "+1-786-564-0471",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "1221 Brickell Ave, Suite 900",
-            "addressLocality": "Miami",
-            "addressRegion": "FL",
-            "postalCode": "33131",
-            "addressCountry": "US",
+        jsonLd={[
+          {
+            "@context": "https://schema.org",
+            "@type": "MovingCompany",
+            "name": `Miami Moving — ${city.name}`,
+            "description": city.metaDescription,
+            "url": `https://miami-moving.com/${city.slug}`,
+            "telephone": "+1-786-564-0471",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "1221 Brickell Ave, Suite 900",
+              "addressLocality": "Miami",
+              "addressRegion": "FL",
+              "postalCode": "33131",
+              "addressCountry": "US",
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": city.name,
+            },
           },
-          "areaServed": {
-            "@type": "City",
-            "name": city.name,
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map((f) => ({
+              "@type": "Question",
+              "name": f.question,
+              "acceptedAnswer": { "@type": "Answer", "text": f.answer },
+            })),
           },
-        }}
+        ]}
       />
       <Header />
       <main>
@@ -134,6 +147,27 @@ const CityPage = () => {
 
         {/* Quote Form CTA */}
         <CityQuoteForm cityName={city.name} />
+
+        {/* City FAQs */}
+        <section className="section-padding bg-muted/50">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-display font-bold text-2xl md:text-3xl text-foreground mb-8 text-center">
+              {city.name} Moving FAQs
+            </h2>
+            <Accordion type="single" collapsible className="w-full">
+              {faqs.map((faq, i) => (
+                <AccordionItem key={i} value={`item-${i}`}>
+                  <AccordionTrigger className="text-left font-semibold text-foreground">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </section>
 
         {/* Other service areas */}
         <section className="section-padding bg-background">

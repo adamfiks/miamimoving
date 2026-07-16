@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { cities } from "../src/data/cityData";
+import { cities, getCityFaqs } from "../src/data/cityData";
 import { services } from "../src/data/serviceData";
 import { blogPosts } from "../src/data/blogData";
 
@@ -31,10 +31,11 @@ type PageMeta = {
   title: string;
   description: string;
   breadcrumbs: { name: string; url: string }[];
-  jsonLd: Record<string, unknown>;
+  jsonLd: Record<string, unknown> | Record<string, unknown>[];
 };
 
 function buildCityPage(city: (typeof cities)[number]): PageMeta {
+  const faqs = getCityFaqs(city);
   return {
     slug: city.slug,
     title: city.metaTitle,
@@ -43,16 +44,27 @@ function buildCityPage(city: (typeof cities)[number]): PageMeta {
       { name: "Home", url: `${SITE_URL}/` },
       { name: `${city.name} Movers`, url: `${SITE_URL}/${city.slug}` },
     ],
-    jsonLd: {
-      "@context": "https://schema.org",
-      "@type": "MovingCompany",
-      name: `Miami Moving — ${city.name}`,
-      description: city.metaDescription,
-      url: `${SITE_URL}/${city.slug}`,
-      telephone: PHONE,
-      address: ADDRESS,
-      areaServed: { "@type": "City", name: city.name },
-    },
+    jsonLd: [
+      {
+        "@context": "https://schema.org",
+        "@type": "MovingCompany",
+        name: `Miami Moving — ${city.name}`,
+        description: city.metaDescription,
+        url: `${SITE_URL}/${city.slug}`,
+        telephone: PHONE,
+        address: ADDRESS,
+        areaServed: { "@type": "City", name: city.name },
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqs.map((f) => ({
+          "@type": "Question",
+          name: f.question,
+          acceptedAnswer: { "@type": "Answer", text: f.answer },
+        })),
+      },
+    ],
   };
 }
 
@@ -136,9 +148,14 @@ function renderPage(page: PageMeta): string {
     })),
   };
 
+  const jsonLdBlocks = Array.isArray(page.jsonLd) ? page.jsonLd : [page.jsonLd];
+  const extraScripts = jsonLdBlocks
+    .map((block, i) => `<script type="application/ld+json" id="seo-extra-jsonld-${i}">${JSON.stringify(block)}</script>`)
+    .join("\n    ");
+
   const injected = `
     <script type="application/ld+json" id="seo-breadcrumb-jsonld">${JSON.stringify(breadcrumbLd)}</script>
-    <script type="application/ld+json" id="seo-extra-jsonld">${JSON.stringify(page.jsonLd)}</script>
+    ${extraScripts}
   </head>`;
 
   html = html.replace(/<\/head>/, injected);
