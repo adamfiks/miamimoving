@@ -3,19 +3,34 @@ import { Resend } from "npm:resend@2.0.0";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
-const ALLOWED_ORIGINS = [
+const EXACT_ALLOWED_ORIGINS = new Set([
   "https://miami-moving.com",
   "https://www.miami-moving.com",
   "https://miamimoving.lovable.app",
-  "https://id-preview--20ad233c-7377-40a0-b7d8-93642dbf1bed.lovable.app",
-];
+  "http://localhost:8080",
+  "http://localhost:5173",
+]);
+
+const isAllowedOrigin = (origin: string): boolean => {
+  if (EXACT_ALLOWED_ORIGINS.has(origin)) return true;
+  // Allow any Lovable preview/sandbox subdomain
+  try {
+    const { hostname, protocol } = new URL(origin);
+    if (protocol !== "https:" && protocol !== "http:") return false;
+    return hostname.endsWith(".lovable.app") || hostname.endsWith(".lovableproject.com");
+  } catch {
+    return false;
+  }
+};
 
 const getCorsHeaders = (req: Request) => {
   const origin = req.headers.get("origin") || "";
+  const allowed = isAllowedOrigin(origin) ? origin : "https://miami-moving.com";
   return {
-    "Access-Control-Allow-Origin": ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0],
+    "Access-Control-Allow-Origin": allowed,
     "Access-Control-Allow-Headers":
       "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
+    "Vary": "Origin",
   };
 };
 
