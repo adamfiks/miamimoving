@@ -155,8 +155,9 @@ var submit_quote_request_default = defineTool6({
   },
   annotations: { readOnlyHint: false, destructiveHint: false, openWorldHint: true },
   handler: async ({ name, phone, email, moveDate, fromLocation, toLocation }) => {
-    const supabaseUrl = Deno.env.get("SUPABASE_URL");
-    const anonKey = Deno.env.get("SUPABASE_PUBLISHABLE_KEY") ?? Deno.env.get("SUPABASE_ANON_KEY");
+    const denoEnv = globalThis.Deno?.env;
+    const supabaseUrl = denoEnv?.get("SUPABASE_URL");
+    const anonKey = denoEnv?.get("SUPABASE_PUBLISHABLE_KEY") ?? denoEnv?.get("SUPABASE_ANON_KEY");
     if (!supabaseUrl || !anonKey) {
       return {
         content: [{ type: "text", text: "Server misconfiguration: quote endpoint is unavailable." }],

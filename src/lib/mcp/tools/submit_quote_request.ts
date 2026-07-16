@@ -19,8 +19,10 @@ export default defineTool({
   },
   annotations: { readOnlyHint: false, destructiveHint: false, openWorldHint: true },
   handler: async ({ name, phone, email, moveDate, fromLocation, toLocation }) => {
-    const supabaseUrl = Deno.env.get("SUPABASE_URL");
-    const anonKey = Deno.env.get("SUPABASE_PUBLISHABLE_KEY") ?? Deno.env.get("SUPABASE_ANON_KEY");
+    // Deno.env at runtime inside the generated Supabase Edge Function.
+    const denoEnv = (globalThis as { Deno?: { env: { get: (k: string) => string | undefined } } }).Deno?.env;
+    const supabaseUrl = denoEnv?.get("SUPABASE_URL");
+    const anonKey = denoEnv?.get("SUPABASE_PUBLISHABLE_KEY") ?? denoEnv?.get("SUPABASE_ANON_KEY");
 
     if (!supabaseUrl || !anonKey) {
       return {
