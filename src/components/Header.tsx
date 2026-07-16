@@ -18,6 +18,7 @@ const navLinks = [
   { label: "Services", href: "/#services", dropdown: serviceDropdownItems },
   { label: "Service Areas", href: "/#areas", dropdown: cityDropdownItems },
   { label: "Why Us", href: "/#why-us" },
+  { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "/#faq" },
 ];
 

@@ -3,6 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { cities } from "../src/data/cityData";
 import { services } from "../src/data/serviceData";
+import { blogPosts } from "../src/data/blogData";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const distDir = path.resolve(__dirname, "..", "dist");
@@ -144,9 +145,58 @@ function renderPage(page: PageMeta): string {
   return html;
 }
 
+const BLOG_DESCRIPTION =
+  "Moving tips, cost guides, and neighborhood insights for anyone moving in, out of, or across South Florida — from the team at Miami Moving.";
+
+function buildBlogPostPage(post: (typeof blogPosts)[number]): PageMeta {
+  const url = `${SITE_URL}/blog/${post.slug}`;
+  return {
+    slug: `blog/${post.slug}`,
+    title: post.metaTitle,
+    description: post.metaDescription,
+    breadcrumbs: [
+      { name: "Home", url: `${SITE_URL}/` },
+      { name: "Blog", url: `${SITE_URL}/blog` },
+      { name: post.title, url },
+    ],
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      headline: post.title,
+      description: post.metaDescription,
+      datePublished: post.publishDate,
+      author: { "@type": "Organization", name: "Miami Moving" },
+      publisher: {
+        "@type": "Organization",
+        name: "Miami Moving",
+        url: SITE_URL,
+      },
+      url,
+    },
+  };
+}
+
+const blogIndexPage: PageMeta = {
+  slug: "blog",
+  title: "South Florida Moving Tips & Resources | Miami Moving Blog",
+  description: BLOG_DESCRIPTION,
+  breadcrumbs: [
+    { name: "Home", url: `${SITE_URL}/` },
+    { name: "Blog", url: `${SITE_URL}/blog` },
+  ],
+  jsonLd: {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: "Miami Moving Blog",
+    url: `${SITE_URL}/blog`,
+  },
+};
+
 const pages: PageMeta[] = [
   ...cities.map(buildCityPage),
   ...services.map(buildServicePage),
+  blogIndexPage,
+  ...blogPosts.map(buildBlogPostPage),
 ];
 
 let written = 0;
