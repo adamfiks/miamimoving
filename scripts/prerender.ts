@@ -148,9 +148,14 @@ function renderPage(page: PageMeta): string {
     })),
   };
 
+  const jsonLdBlocks = Array.isArray(page.jsonLd) ? page.jsonLd : [page.jsonLd];
+  const extraScripts = jsonLdBlocks
+    .map((block, i) => `<script type="application/ld+json" id="seo-extra-jsonld-${i}">${JSON.stringify(block)}</script>`)
+    .join("\n    ");
+
   const injected = `
     <script type="application/ld+json" id="seo-breadcrumb-jsonld">${JSON.stringify(breadcrumbLd)}</script>
-    <script type="application/ld+json" id="seo-extra-jsonld">${JSON.stringify(page.jsonLd)}</script>
+    ${extraScripts}
   </head>`;
 
   html = html.replace(/<\/head>/, injected);
