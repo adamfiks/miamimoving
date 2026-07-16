@@ -6,6 +6,7 @@ import HowItWorksSection from "@/components/HowItWorksSection";
 import WhyChooseUsSection from "@/components/WhyChooseUsSection";
 
 import FAQSection from "@/components/FAQSection";
+import BlogPreviewSection from "@/components/BlogPreviewSection";
 import FinalCTASection from "@/components/FinalCTASection";
 import Footer from "@/components/Footer";
 
@@ -21,6 +22,7 @@ const Index = () => {
         <WhyChooseUsSection />
         
         <FAQSection />
+        <BlogPreviewSection />
         <FinalCTASection />
       </main>
       <Footer />
