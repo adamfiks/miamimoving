@@ -1,4 +1,4 @@
-import { Truck, Building2, Home, Package, Star, Warehouse } from "lucide-react";
+import { Truck, Building2, Home, Package, Star, Warehouse, Route } from "lucide-react";
 
 export interface ServiceInfo {
   slug: string;
@@ -94,6 +94,45 @@ export const services: ServiceInfo[] = [
       {
         heading: "Industries We Serve",
         text: "Our commercial movers have experience relocating law firms, medical and dental practices, tech startups, retail stores, restaurants, and warehouses. We understand the unique requirements of each industry, from HIPAA-compliant document handling to delicate electronics transport.",
+      },
+    ],
+  },
+  {
+    slug: "long-distance-moving",
+    icon: Route,
+    title: "Long-Distance Moving",
+    shortDescription:
+      "Reliable long-distance and interstate moving from South Florida to anywhere in the continental U.S. Transparent pricing, real-time updates.",
+    metaTitle: "Long-Distance Movers Miami | Interstate Moving Company South Florida",
+    metaDescription:
+      "Moving out of state? Miami Moving offers professional long-distance & interstate moving from Miami, Fort Lauderdale & South Florida. Licensed, insured. Free quote: (786) 564-0471.",
+    h1: "Long-Distance & Interstate Movers Serving South Florida",
+    heroText:
+      "Relocating out of state? Our long-distance moving team handles every mile — from careful packing in Miami to safe, on-time delivery anywhere in the continental U.S.",
+    intro:
+      "Long-distance moves come with challenges local moves don't — multi-day transit, interstate logistics, and the stress of not being able to check in on your belongings along the way. Miami Moving specializes in interstate relocations from Miami, Fort Lauderdale, and across South Florida to destinations throughout the continental United States. Every long-distance move includes a dedicated move coordinator, GPS-tracked transport, and clear communication from pickup to delivery — so you always know where your belongings are.",
+    benefits: [
+      "Interstate moving to any state in the continental U.S.",
+      "Dedicated move coordinator for the entire journey",
+      "GPS-tracked trucks with real-time delivery updates",
+      "Flexible pickup and delivery date windows",
+      "Full-value protection options for cross-country peace of mind",
+      "Transparent, binding quotes — no surprise charges on delivery day",
+    ],
+    trustSignals: [
+      "Licensed & insured for interstate moving",
+      "Experienced crews trained in long-haul packing and load securing",
+      "Clear, upfront pricing with no bait-and-switch estimates",
+      "Consistent single point of contact throughout your move",
+    ],
+    detailedContent: [
+      {
+        heading: "What's Included in Our Long-Distance Moving Service?",
+        text: "Every long-distance move includes professional packing (or supervision of your own packing), full furniture disassembly and reassembly, protective wrapping for all large items, secure loading for interstate transport, and delivery coordination so you know exactly when to expect your belongings at your new home.",
+      },
+      {
+        heading: "Moving Out of South Florida? We've Got You Covered",
+        text: "Whether you're relocating from Miami to New York, Fort Lauderdale to Atlanta, or anywhere else in the continental U.S., our long-distance moving team plans the logistics so your move stays on schedule. We provide binding estimates upfront, so the price you're quoted is the price you pay.",
       },
     ],
   },
