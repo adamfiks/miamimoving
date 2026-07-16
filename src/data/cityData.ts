@@ -221,3 +221,18 @@ export const cities: CityData[] = [
 export const getCityBySlug = (slug: string): CityData | undefined => {
   return cities.find((city) => city.slug === slug);
 };
+
+export const getCityFaqs = (city: CityData): { question: string; answer: string }[] => [
+  {
+    question: `How much does it cost to move in ${city.name}?`,
+    answer: `Local moves in ${city.name} are typically priced by crew size and hours on site rather than a flat rate. Your total depends on your home size, the type of property, and how much packing help you need. Call (786) 564-0471 or request a free quote for pricing based on your specific move.`,
+  },
+  {
+    question: `Do you move ${city.movingTypes[0]} and ${city.movingTypes[1]} in ${city.name}?`,
+    answer: `Yes — we regularly handle ${city.movingTypes.join(", ")} throughout ${city.name}. ${city.neighborhoodNote}`,
+  },
+  {
+    question: `What parts of ${city.name} do you serve?`,
+    answer: `We serve all of ${city.name}, including ${city.localDetails[0].charAt(0).toLowerCase() + city.localDetails[0].slice(1)}${city.localDetails[1] ? " and " + city.localDetails[1].charAt(0).toLowerCase() + city.localDetails[1].slice(1) : ""}.`,
+  },
+];

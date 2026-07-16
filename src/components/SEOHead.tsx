@@ -11,7 +11,7 @@ interface SEOHeadProps {
   canonical: string;
   ogImage?: string;
   breadcrumbs?: BreadcrumbItem[];
-  jsonLd?: Record<string, unknown>;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 const SEOHead = ({
@@ -52,7 +52,6 @@ const SEOHead = ({
     }
     link.setAttribute("href", canonical);
 
-    // Breadcrumb JSON-LD
     const breadcrumbScriptId = "seo-breadcrumb-jsonld";
     let breadcrumbScript = document.getElementById(breadcrumbScriptId) as HTMLScriptElement | null;
     if (breadcrumbs && breadcrumbs.length > 0) {
@@ -75,24 +74,32 @@ const SEOHead = ({
       breadcrumbScript.textContent = JSON.stringify(breadcrumbLd);
     }
 
-    // Additional JSON-LD
-    const extraScriptId = "seo-extra-jsonld";
-    let extraScript = document.getElementById(extraScriptId) as HTMLScriptElement | null;
-    if (jsonLd) {
-      if (!extraScript) {
-        extraScript = document.createElement("script");
-        extraScript.id = extraScriptId;
-        extraScript.type = "application/ld+json";
-        document.head.appendChild(extraScript);
+    const jsonLdArray = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+    const extraIdPrefix = "seo-extra-jsonld-";
+
+    document
+      .querySelectorAll(`script[id^="${extraIdPrefix}"]`)
+      .forEach((el) => {
+        const idx = parseInt(el.id.replace(extraIdPrefix, ""), 10);
+        if (idx >= jsonLdArray.length) el.remove();
+      });
+
+    jsonLdArray.forEach((block, i) => {
+      const id = `${extraIdPrefix}${i}`;
+      let script = document.getElementById(id) as HTMLScriptElement | null;
+      if (!script) {
+        script = document.createElement("script");
+        script.id = id;
+        script.type = "application/ld+json";
+        document.head.appendChild(script);
       }
-      extraScript.textContent = JSON.stringify(jsonLd);
-    }
+      script.textContent = JSON.stringify(block);
+    });
 
     return () => {
       document.title = "Miami Moving | Professional Movers in Miami & South Florida";
-      // Clean up dynamic JSON-LD
       document.getElementById(breadcrumbScriptId)?.remove();
-      document.getElementById(extraScriptId)?.remove();
+      document.querySelectorAll(`script[id^="${extraIdPrefix}"]`).forEach((el) => el.remove());
     };
   }, [title, description, canonical, ogImage, breadcrumbs, jsonLd]);
 
