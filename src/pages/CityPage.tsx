@@ -148,6 +148,27 @@ const CityPage = () => {
         {/* Quote Form CTA */}
         <CityQuoteForm cityName={city.name} />
 
+        {/* City FAQs */}
+        <section className="section-padding bg-muted/50">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-display font-bold text-2xl md:text-3xl text-foreground mb-8 text-center">
+              {city.name} Moving FAQs
+            </h2>
+            <Accordion type="single" collapsible className="w-full">
+              {faqs.map((faq, i) => (
+                <AccordionItem key={i} value={`item-${i}`}>
+                  <AccordionTrigger className="text-left font-semibold text-foreground">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </section>
+
         {/* Other service areas */}
         <section className="section-padding bg-background">
           <div className="max-w-5xl mx-auto">
