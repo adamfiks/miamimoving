@@ -38,7 +38,7 @@ const ServiceAreasSection = () => {
             <div className="rounded-2xl overflow-hidden shadow-xl border border-border">
               <iframe
                 title="Miami Moving Service Area Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d459377.31498956986!2d-80.58992872946788!3d26.04443753400985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b0a20ec8c111%3A0xff96f271ddad4f65!2sMiami%2C%20FL!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3595.988649!2d-80.1918!3d25.7617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b8f0b0b0b0b1%3A0x0!2s1221%20Brickell%20Ave%2C%20Miami%2C%20FL%2033131!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
                 className="w-full h-80 md:h-96"
                 style={{ border: 0 }}
                 allowFullScreen

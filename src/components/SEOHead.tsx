@@ -18,7 +18,7 @@ const SEOHead = ({
   title,
   description,
   canonical,
-  ogImage = "https://miami-moving.com/og-image.png",
+  ogImage = "https://miami-moving.com/og-image.jpg",
   breadcrumbs,
   jsonLd,
 }: SEOHeadProps) => {
