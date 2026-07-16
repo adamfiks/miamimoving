@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "sdk_version": "0.22.2",
+  "path": "/functions/v1/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "miami-moving-mcp",
+      "version": "0.1.0",
+      "title": "Miami Moving"
+    },
+    "tools": [
+      {
+        "name": "list_services",
+        "title": "List moving services",
+        "description": "List all moving services offered by Miami Moving (local, commercial, residential, packing, white glove, storage) with slug, title, short description, and page URL.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_service_areas",
+        "title": "List service areas",
+        "description": "List every South Florida city Miami Moving serves, with its slug, display name, and dedicated page URL.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_service_details",
+        "title": "Get moving service details",
+        "description": "Return full details for one Miami Moving service by slug. Use `list_services` first to see valid slugs.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "slug": {
+              "type": "string",
+              "description": "Service slug, e.g. 'local-moving', 'commercial-moving', 'white-glove-moving'."
+            }
+          },
+          "required": [
+            "slug"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_service_area_details",
+        "title": "Get service area details",
+        "description": "Return moving-service details for one South Florida city Miami Moving serves. Use `list_service_areas` for valid slugs.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "slug": {
+              "type": "string",
+              "description": "City slug, e.g. 'miami-movers', 'fort-lauderdale-movers', 'boca-raton-movers'."
+            }
+          },
+          "required": [
+            "slug"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_business_info",
+        "title": "Get business info",
+        "description": "Return Miami Moving business info: name, phone, email, address, hours, website, and service-area summary.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "submit_quote_request",
+        "title": "Submit a moving quote request",
+        "description": "Submit a moving quote request on behalf of the caller. The Miami Moving team will follow up by phone and email. Provide the customer's name, phone, and email at minimum.",
+        "annotations": {
+          "readOnlyHint": false,
+          "destructiveHint": false,
+          "openWorldHint": true
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Customer's full name."
+            },
+            "phone": {
+              "type": "string",
+              "description": "Customer's phone number, including area code."
+            },
+            "email": {
+              "type": "string",
+              "description": "Customer's email address."
+            },
+            "moveDate": {
+              "type": "string",
+              "description": "Preferred move date in YYYY-MM-DD, if known."
+            },
+            "fromLocation": {
+              "type": "string",
+              "description": "Origin address or city."
+            },
+            "toLocation": {
+              "type": "string",
+              "description": "Destination address or city."
+            }
+          },
+          "required": [
+            "name",
+            "phone",
+            "email"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
