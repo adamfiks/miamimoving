@@ -4,8 +4,8 @@ import { getIndexableRoutes, getRouteSeo } from "./seo";
 import { retiredRoutes, buildRedirectHtml } from "./redirects";
 
 describe("owner-approved service scope", () => {
-  it("offers six services including storage, never the retired service", () => {
-    expect(services.map((s) => s.slug)).toEqual(["local-moving", "commercial-moving", "residential-moving", "packing-and-unpacking", "white-glove-moving", "storage-solutions"]);
+  it("offers seven services including storage and condo moving, never the retired service", () => {
+    expect(services.map((s) => s.slug)).toEqual(["local-moving", "commercial-moving", "residential-moving", "packing-and-unpacking", "white-glove-moving", "storage-solutions", "condo-high-rise-moving"]);
   });
 
   it("limits service schema coverage to the three South Florida counties", () => {

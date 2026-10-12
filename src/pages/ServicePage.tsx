@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import CityQuoteForm from "@/components/CityQuoteForm";
 import { getServiceBySlug, services as allServices } from "@/data/serviceData";
 import { cities } from "@/data/cityData";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const ServicePage = () => {
   const location = useLocation();
@@ -63,9 +64,21 @@ const ServicePage = () => {
                   <h3 className="font-display font-bold text-xl text-foreground mb-3">
                     {block.heading}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">{block.text}</p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {block.text}{" "}
+                    {block.link && <Link to={block.link.href} className="text-primary font-medium hover:underline">{block.link.label}.</Link>}
+                  </p>
                 </div>
               ))}
+              <h2 className="font-display font-bold text-2xl text-foreground mb-5">Your Preparation Checklist</h2>
+              <ul className="space-y-3 mb-10">
+                {service.preparation.map((item) => <li key={item} className="flex gap-3 text-muted-foreground leading-relaxed"><CheckCircle className="w-5 h-5 text-primary shrink-0 mt-1" />{item}</li>)}
+              </ul>
+              <h2 className="font-display font-bold text-2xl text-foreground mb-4">Areas We Serve</h2>
+              <p className="text-muted-foreground leading-relaxed mb-4">{service.areas.text}</p>
+              <ul className="flex flex-wrap gap-x-6 gap-y-2">
+                {service.areas.cities.map((city) => <li key={city.href}><Link to={city.href} className="text-primary font-medium hover:underline">{city.label}</Link></li>)}
+              </ul>
             </motion.div>
           </div>
         </section>
@@ -101,6 +114,20 @@ const ServicePage = () => {
                 </motion.div>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section className="section-padding bg-background">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-display font-bold text-2xl md:text-3xl text-foreground mb-8">{service.title} FAQs</h2>
+            <Accordion type="single" collapsible className="space-y-3">
+              {service.faqs.map((faq, index) => (
+                <AccordionItem key={faq.question} value={`service-faq-${index}`} className="bg-card border border-border rounded-xl px-6 data-[state=open]:shadow-md transition-shadow">
+                  <AccordionTrigger className="font-display font-semibold text-card-foreground text-left hover:no-underline py-5">{faq.question}</AccordionTrigger>
+                  <AccordionContent forceMount className="text-muted-foreground leading-relaxed pb-5">{faq.answer}</AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
         </section>
 

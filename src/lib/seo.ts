@@ -54,6 +54,14 @@ export const businessSchema = (overrides: JsonLd = {}): JsonLd => ({
   description:
     "Professional residential & commercial moving services across South Florida. Licensed, insured, and dedicated to making your move stress-free.",
   areaServed: cities.map((c) => ({ "@type": "City", name: c.name })),
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Local South Florida Moving Services",
+    itemListElement: services.map((service) => ({
+      "@type": "Offer",
+      itemOffered: { "@type": "Service", name: service.title, url: `${SITE_URL}/${service.slug}` },
+    })),
+  },
   ...overrides,
 });
 
@@ -169,6 +177,7 @@ export function getRouteSeo(pathname: string): RouteSeo {
           areaServed: ["Miami-Dade", "Broward", "Palm Beach"].map((name) => ({ "@type": "AdministrativeArea", name: `${name} County, Florida` })),
         },
         breadcrumbSchema([HOME_CRUMB, { name: service.title, url }]),
+        faqSchema(service.faqs),
       ],
     };
   }

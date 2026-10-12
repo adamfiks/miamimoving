@@ -30,8 +30,8 @@ describe("route SEO schema", () => {
     expect(types("/miami-movers")).toEqual(["MovingCompany", "FAQPage", "BreadcrumbList"]);
   });
 
-  it("service and blog pages get Service / BlogPosting and no FAQPage", () => {
-    expect(types("/local-moving")).toEqual(["MovingCompany", "Service", "BreadcrumbList"]);
+  it("service pages include FAQs while blog posts retain BlogPosting", () => {
+    expect(types("/local-moving")).toEqual(["MovingCompany", "Service", "BreadcrumbList", "FAQPage"]);
     expect(types("/blog/how-much-does-it-cost-to-move-in-miami")).toEqual(["MovingCompany", "BlogPosting", "BreadcrumbList"]);
   });
 
