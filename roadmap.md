@@ -1,4 +1,4 @@
-# Phase 2
-- [x] Remove unsupported service and rewrite inaccurate moving/storage claims.
-- [x] Add static redirect fallback and client redirect; exclude retired service from sitemap.
-- [x] Verify service scope, rendered claims, redirect, sitemap, and browser errors without sending quotes.
+# Phase 3
+- [ ] Differentiate every city’s local copy and stored FAQs without changing presentation.
+- [ ] Refine unique page titles/descriptions and confirm changed-page sitemap dates.
+- [ ] Verify city word counts, sentence overlap, FAQ/schema consistency, tests and browser errors; no quote submission.

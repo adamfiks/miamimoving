@@ -5,6 +5,7 @@
 - `App` has no router; `main.tsx` adds BrowserRouter (hydrates only when `#root[data-ssr-path]` matches the URL) and `entry-server.tsx` adds StaticRouter.
 - Components must render identically on server and client: no `window`/`document` during render, dates formatted with an explicit timeZone, browser-only logic in effects.
 - FAQ accordions use `forceMount` so answers are in the prerendered HTML; FAQPage schema is generated from the same data the page renders.
+- City FAQs are stored on each city data object and returned unchanged by `getCityFaqs`, keeping city-specific visible answers and schema aligned without name-swapped templates.
 - No `aggregateRating` in self-served schema (Google review-snippet policy).
 - New routes must be added to `getIndexableRoutes()` in `src/lib/seo.ts` so they are prerendered and listed in the sitemap.
 - Retired service URLs are defined in `src/lib/redirects.ts`; generate noindex static redirect documents and matching client redirects, never sitemap entries, because hosting does not process custom redirect configuration.

@@ -25,9 +25,9 @@ export const services: ServiceInfo[] = [
     title: "Local Moving",
     shortDescription:
       "Fast, reliable local moves within Miami-Dade, Broward, and Palm Beach counties. Short-notice moves when our schedule allows.",
-    metaTitle: "Local Movers in Miami | South Florida Local Moving Company",
+    metaTitle: "Local Moving in Miami | Miami Moving",
     metaDescription:
-      "Professional local movers in Miami & South Florida. Licensed & insured local moving company with transparent hourly pricing. Get a free quote today!",
+      "Local moving in Miami and South Florida for apartments, condos, homes and offices. Discuss access, packing and request your free quote from Miami Moving.",
     h1: "Trusted Local Movers in Miami & South Florida",
     heroText:
       "Moving across town? Our experienced local moving crews handle everything from studios to large family homes with speed, care, and transparent pricing.",
@@ -64,9 +64,9 @@ export const services: ServiceInfo[] = [
     title: "Commercial Moving",
     shortDescription:
       "Minimize business downtime with our efficient office and commercial relocation services.",
-    metaTitle: "Commercial Movers Miami | Office & Business Moving Company",
+    metaTitle: "Commercial Moving in Miami | Miami Moving",
     metaDescription:
-      "Professional commercial movers in Miami. Minimize downtime with our experienced office moving company. Licensed, insured & available 7 days a week.",
+      "Commercial moving in Miami and South Florida for offices and businesses. Plan furniture, equipment and building access; request a quote from Miami Moving.",
     h1: "Professional Commercial Movers in Miami",
     heroText:
       "Relocating your business? Our commercial moving specialists minimize downtime and handle office furniture, IT equipment, and sensitive documents with expert care.",
@@ -103,9 +103,9 @@ export const services: ServiceInfo[] = [
     title: "Residential Moving",
     shortDescription:
       "From studios to mansions — we treat your home and belongings with the utmost care.",
-    metaTitle: "Residential Movers Miami | Home Moving Company Near Me",
+    metaTitle: "Residential Moving in Miami | Miami Moving",
     metaDescription:
-      "Professional residential movers in Miami & South Florida. Professional home moving services for apartments, condos & houses. Licensed & insured. Free quotes!",
+      "Residential moving in Miami and South Florida for apartments, condos, townhomes and houses. Discuss packing and access; get a free quote from Miami Moving.",
     h1: "Residential Movers You Can Trust in Miami",
     heroText:
       "Moving to a new home should be exciting, not stressful. Our residential moving crews handle every detail with care — from packing your kitchen to setting up your new living room.",
@@ -142,9 +142,9 @@ export const services: ServiceInfo[] = [
     title: "Packing & Unpacking",
     shortDescription:
       "Professional packing with protective materials. We handle fragile items, artwork, and electronics.",
-    metaTitle: "Packing & Unpacking Services Miami | Professional Packers",
+    metaTitle: "Packing & Unpacking in Miami | Miami Moving",
     metaDescription:
-      "Expert packing & unpacking services in Miami. We use protective materials to protect fragile items, artwork & electronics. Licensed movers. Get a free quote!",
+      "Packing and unpacking in Miami for local home and office moves. Discuss protective materials, fragile items and your packing needs with Miami Moving.",
     h1: "Professional Packing & Unpacking Services in Miami",
     heroText:
       "Don't want the hassle of packing? Our expert packers use protective materials and proven techniques to protect every item — from fine china to flat-screen TVs.",
@@ -181,9 +181,9 @@ export const services: ServiceInfo[] = [
     title: "White Glove Moving",
     shortDescription:
       "Full-service local moving with extra care for high-value items and homes.",
-    metaTitle: "White Glove Moving Miami | Careful Local Moving Services",
+    metaTitle: "White Glove Moving in Miami | Miami Moving",
     metaDescription:
-      "White glove movers in Miami. Local moving services for homes, fine art, antiques & high-value items. Fully licensed & insured. Request a quote!",
+      "White glove moving in Miami for local homes and condos, with care for furniture, artwork and fragile items. Discuss the move and get a quote: Miami Moving.",
     h1: "White Glove Moving Services in Miami",
     heroText:
       "Our white glove service focuses on careful packing, furniture protection, and handling high-value items during your local South Florida move.",
@@ -220,9 +220,9 @@ export const services: ServiceInfo[] = [
     title: "Storage Solutions",
     shortDescription:
       "Secure storage options for short-term and long-term moving needs.",
-    metaTitle: "Storage Solutions Miami | Secure Moving Storage Options",
+    metaTitle: "Storage Solutions in Miami | Miami Moving",
     metaDescription:
-      "Secure storage options in Miami. Short-term & long-term storage solutions for local moves. Licensed moving company with transparent pricing. Free quote!",
+      "Secure storage options in Miami for gaps between local moves. Discuss your items, storage duration, pickup and delivery; request a quote from Miami Moving.",
     h1: "Secure Storage Solutions in Miami & South Florida",
     heroText:
       "Need storage between moves? Ask our team about secure storage options that fit your moving timeline.",
