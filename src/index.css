@@ -137,3 +137,9 @@ input[type="date"]::-webkit-date-and-time-value {
     color: transparent;
   }
 }
+
+/* Prerendered HTML: until JS runs, reveal-animated content (inline opacity:0) stays visible. */
+html:not(.js) [style*="opacity:0"] {
+  opacity: 1 !important;
+  transform: none !important;
+}

@@ -2,7 +2,7 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import { cities } from "@/data/cityData";
 
-const footerCities = cities.slice(0, 8);
+const footerCities = cities;
 
 import { services as serviceList } from "@/data/serviceData";
 

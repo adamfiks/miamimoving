@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 import { mcpPlugin } from "@lovable.dev/mcp-js/stacks/supabase/vite";
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig(({ mode, isSsrBuild }) => ({
   server: {
     host: "::",
     port: 8080,
@@ -15,8 +15,8 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react(),
-    mode === "development" && componentTagger(),
-    mcpPlugin(),
+    mode === "development" && !isSsrBuild && componentTagger(),
+    !isSsrBuild && mcpPlugin(),
   ].filter(Boolean),
   resolve: {
     alias: {

@@ -4,7 +4,6 @@ import { CheckCircle, ArrowLeft, Truck, Package, Shield, Clock, MapPin } from "l
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CityQuoteForm from "@/components/CityQuoteForm";
-import SEOHead from "@/components/SEOHead";
 import { getCityBySlug, getCityFaqs, cities } from "@/data/cityData";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
@@ -19,46 +18,6 @@ const CityPage = () => {
 
   return (
     <>
-      <SEOHead
-        title={city.metaTitle}
-        description={city.metaDescription}
-        canonical={`https://miami-moving.com/${city.slug}`}
-        breadcrumbs={[
-          { name: "Home", url: "https://miami-moving.com/" },
-          { name: `${city.name} Movers`, url: `https://miami-moving.com/${city.slug}` },
-        ]}
-        jsonLd={[
-          {
-            "@context": "https://schema.org",
-            "@type": "MovingCompany",
-            "name": `Miami Moving — ${city.name}`,
-            "description": city.metaDescription,
-            "url": `https://miami-moving.com/${city.slug}`,
-            "telephone": "+1-786-564-0471",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "1221 Brickell Ave, Suite 900",
-              "addressLocality": "Miami",
-              "addressRegion": "FL",
-              "postalCode": "33131",
-              "addressCountry": "US",
-            },
-            "areaServed": {
-              "@type": "City",
-              "name": city.name,
-            },
-          },
-          {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": faqs.map((f) => ({
-              "@type": "Question",
-              "name": f.question,
-              "acceptedAnswer": { "@type": "Answer", "text": f.answer },
-            })),
-          },
-        ]}
-      />
       <Header />
       <main>
         {/* Hero */}
@@ -160,7 +119,7 @@ const CityPage = () => {
                   <AccordionTrigger className="text-left font-semibold text-foreground">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground leading-relaxed">
+                  <AccordionContent forceMount className="text-muted-foreground leading-relaxed">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>

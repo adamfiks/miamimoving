@@ -4,7 +4,6 @@ import { CheckCircle, ArrowLeft, Shield, Truck, Clock, Package } from "lucide-re
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CityQuoteForm from "@/components/CityQuoteForm";
-import SEOHead from "@/components/SEOHead";
 import { getServiceBySlug, services as allServices } from "@/data/serviceData";
 import { cities } from "@/data/cityData";
 
@@ -20,40 +19,6 @@ const ServicePage = () => {
 
   return (
     <>
-      <SEOHead
-        title={service.metaTitle}
-        description={service.metaDescription}
-        canonical={`https://miami-moving.com/${service.slug}`}
-        breadcrumbs={[
-          { name: "Home", url: "https://miami-moving.com/" },
-          { name: service.title, url: `https://miami-moving.com/${service.slug}` },
-        ]}
-        jsonLd={{
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "name": service.title,
-          "description": service.metaDescription,
-          "url": `https://miami-moving.com/${service.slug}`,
-          "provider": {
-            "@type": "MovingCompany",
-            "name": "Miami Moving",
-            "telephone": "+1-786-564-0471",
-            "url": "https://miami-moving.com",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "1221 Brickell Ave, Suite 900",
-              "addressLocality": "Miami",
-              "addressRegion": "FL",
-              "postalCode": "33131",
-              "addressCountry": "US",
-            },
-          },
-          "areaServed": {
-            "@type": "State",
-            "name": "Florida",
-          },
-        }}
-      />
       <Header />
       <main>
         {/* Hero */}

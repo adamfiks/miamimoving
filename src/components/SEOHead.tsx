@@ -1,29 +1,20 @@
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { getRouteSeo } from "@/lib/seo";
 
-interface BreadcrumbItem {
-  name: string;
-  url: string;
-}
+const JSONLD_PREFIX = "seo-jsonld-";
 
-interface SEOHeadProps {
-  title: string;
-  description: string;
-  canonical: string;
-  ogImage?: string;
-  breadcrumbs?: BreadcrumbItem[];
-  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
-}
+/**
+ * Keeps <head> in sync with the current route during client-side navigation.
+ * The prerendered HTML already contains identical tags (same ids), so on first
+ * load this just rewrites them in place.
+ */
+const RouteSEO = () => {
+  const { pathname } = useLocation();
 
-const SEOHead = ({
-  title,
-  description,
-  canonical,
-  ogImage = "https://miami-moving.com/og-image.jpg",
-  breadcrumbs,
-  jsonLd,
-}: SEOHeadProps) => {
   useEffect(() => {
-    document.title = title;
+    const seo = getRouteSeo(pathname);
+    document.title = seo.title;
 
     const setMeta = (name: string, content: string, attr = "name") => {
       let el = document.querySelector(`meta[${attr}="${name}"]`) as HTMLMetaElement | null;
@@ -35,57 +26,35 @@ const SEOHead = ({
       el.setAttribute("content", content);
     };
 
-    setMeta("description", description);
-    setMeta("og:title", title, "property");
-    setMeta("og:description", description, "property");
-    setMeta("og:url", canonical, "property");
-    setMeta("og:image", ogImage, "property");
-    setMeta("twitter:title", title);
-    setMeta("twitter:description", description);
-    setMeta("twitter:image", ogImage);
+    setMeta("description", seo.description);
+    setMeta("og:title", seo.title, "property");
+    setMeta("og:description", seo.description, "property");
+    setMeta("twitter:title", seo.title);
+    setMeta("twitter:description", seo.description);
+
+    const robots = document.querySelector('meta[name="robots"]');
+    if (seo.noindex) setMeta("robots", "noindex");
+    else robots?.remove();
 
     let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-    if (!link) {
-      link = document.createElement("link");
-      link.setAttribute("rel", "canonical");
-      document.head.appendChild(link);
-    }
-    link.setAttribute("href", canonical);
-
-    const breadcrumbScriptId = "seo-breadcrumb-jsonld";
-    let breadcrumbScript = document.getElementById(breadcrumbScriptId) as HTMLScriptElement | null;
-    if (breadcrumbs && breadcrumbs.length > 0) {
-      const breadcrumbLd = {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: breadcrumbs.map((item, i) => ({
-          "@type": "ListItem",
-          position: i + 1,
-          name: item.name,
-          item: item.url,
-        })),
-      };
-      if (!breadcrumbScript) {
-        breadcrumbScript = document.createElement("script");
-        breadcrumbScript.id = breadcrumbScriptId;
-        breadcrumbScript.type = "application/ld+json";
-        document.head.appendChild(breadcrumbScript);
+    if (seo.canonical) {
+      setMeta("og:url", seo.canonical, "property");
+      if (!link) {
+        link = document.createElement("link");
+        link.setAttribute("rel", "canonical");
+        document.head.appendChild(link);
       }
-      breadcrumbScript.textContent = JSON.stringify(breadcrumbLd);
+      link.setAttribute("href", seo.canonical);
+    } else {
+      link?.remove();
     }
 
-    const jsonLdArray = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
-    const extraIdPrefix = "seo-extra-jsonld-";
-
-    document
-      .querySelectorAll(`script[id^="${extraIdPrefix}"]`)
-      .forEach((el) => {
-        const idx = parseInt(el.id.replace(extraIdPrefix, ""), 10);
-        if (idx >= jsonLdArray.length) el.remove();
-      });
-
-    jsonLdArray.forEach((block, i) => {
-      const id = `${extraIdPrefix}${i}`;
+    document.querySelectorAll(`script[id^="${JSONLD_PREFIX}"]`).forEach((el) => {
+      const idx = parseInt(el.id.slice(JSONLD_PREFIX.length), 10);
+      if (!(idx < seo.jsonLd.length)) el.remove();
+    });
+    seo.jsonLd.forEach((block, i) => {
+      const id = `${JSONLD_PREFIX}${i}`;
       let script = document.getElementById(id) as HTMLScriptElement | null;
       if (!script) {
         script = document.createElement("script");
@@ -95,15 +64,9 @@ const SEOHead = ({
       }
       script.textContent = JSON.stringify(block);
     });
-
-    return () => {
-      document.title = "Miami Moving | Professional Movers in Miami & South Florida";
-      document.getElementById(breadcrumbScriptId)?.remove();
-      document.querySelectorAll(`script[id^="${extraIdPrefix}"]`).forEach((el) => el.remove());
-    };
-  }, [title, description, canonical, ogImage, breadcrumbs, jsonLd]);
+  }, [pathname]);
 
   return null;
 };
 
-export default SEOHead;
+export default RouteSEO;
