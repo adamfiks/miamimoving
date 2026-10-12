@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Calendar, Clock, Phone } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
 import { getBlogPostBySlug } from "@/data/blogData";
 
 const formatDate = (iso: string) =>
@@ -11,6 +10,7 @@ const formatDate = (iso: string) =>
     year: "numeric",
     month: "long",
     day: "numeric",
+    timeZone: "UTC",
   });
 
 const BlogPost = () => {
@@ -23,30 +23,6 @@ const BlogPost = () => {
 
   return (
     <>
-      <SEOHead
-        title={post.metaTitle}
-        description={post.metaDescription}
-        canonical={url}
-        breadcrumbs={[
-          { name: "Home", url: "https://miami-moving.com/" },
-          { name: "Blog", url: "https://miami-moving.com/blog" },
-          { name: post.title, url },
-        ]}
-        jsonLd={{
-          "@context": "https://schema.org",
-          "@type": "BlogPosting",
-          headline: post.title,
-          description: post.metaDescription,
-          datePublished: post.publishDate,
-          author: { "@type": "Organization", name: "Miami Moving" },
-          publisher: {
-            "@type": "Organization",
-            name: "Miami Moving",
-            url: "https://miami-moving.com",
-          },
-          url,
-        }}
-      />
       <Header />
       <main>
         <section className="bg-primary pt-28 pb-14 md:pt-36 md:pb-16 px-4 md:px-8">

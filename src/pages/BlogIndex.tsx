@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
 import { blogPosts } from "@/data/blogData";
 
 const BLOG_DESCRIPTION =
@@ -14,6 +13,7 @@ const formatDate = (iso: string) =>
     year: "numeric",
     month: "long",
     day: "numeric",
+    timeZone: "UTC",
   });
 
 const BlogIndex = () => {
@@ -23,21 +23,6 @@ const BlogIndex = () => {
 
   return (
     <>
-      <SEOHead
-        title="South Florida Moving Tips & Resources | Miami Moving Blog"
-        description={BLOG_DESCRIPTION}
-        canonical="https://miami-moving.com/blog"
-        breadcrumbs={[
-          { name: "Home", url: "https://miami-moving.com/" },
-          { name: "Blog", url: "https://miami-moving.com/blog" },
-        ]}
-        jsonLd={{
-          "@context": "https://schema.org",
-          "@type": "Blog",
-          name: "Miami Moving Blog",
-          url: "https://miami-moving.com/blog",
-        }}
-      />
       <Header />
       <main>
         <section className="bg-primary pt-28 pb-16 md:pt-36 md:pb-20 px-4 md:px-8">
