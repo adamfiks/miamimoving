@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import { blogPosts } from "@/data/blogData";
 
 const BLOG_DESCRIPTION =
-  "Moving tips, cost guides, and neighborhood insights for anyone moving in, out of, or across South Florida — from the team at Miami Moving.";
+  "Moving tips, cost guides, and neighborhood insights for anyone moving within South Florida — from the team at Miami Moving.";
 
 const formatDate = (iso: string) =>
   new Date(iso).toLocaleDateString("en-US", {

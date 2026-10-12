@@ -16,7 +16,7 @@ const reasons = [
   {
     icon: Users,
     title: "Experienced Movers",
-    description: "Our trained professionals have completed thousands of moves across South Florida.",
+    description: "Our professional movers handle local residential and commercial moves across South Florida.",
   },
   {
     icon: DollarSign,
@@ -30,8 +30,8 @@ const reasons = [
   },
   {
     icon: Star,
-    title: "5-Star Service",
-    description: "Hundreds of 5-star reviews from happy customers. We treat every move like our own.",
+    title: "Careful Service",
+    description: "We focus on careful handling and clear communication throughout your move.",
   },
 ];
 
@@ -53,8 +53,8 @@ const WhyChooseUsSection = () => {
             The Moving Company You Can Trust
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            We combine professionalism, care, and unbeatable value to deliver the
-            best moving experience in South Florida.
+            We combine professionalism, care, and transparent pricing for local
+            moves across South Florida.
           </p>
         </motion.div>
 
@@ -92,10 +92,10 @@ const WhyChooseUsSection = () => {
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6"
         >
           {[
-            { number: "2,500+", label: "Moves Completed" },
-            { number: "4.9★", label: "Average Rating" },
-            { number: "10+", label: "Years Experience" },
-            { number: "100%", label: "Satisfaction Rate" },
+            { number: "Local", label: "South Florida Moves" },
+            { number: "Care", label: "For Your Belongings" },
+            { number: "Clear", label: "Transparent Pricing" },
+            { number: "Insured", label: "Moving Services" },
           ].map((stat) => (
             <div
               key={stat.label}

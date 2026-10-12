@@ -85,7 +85,7 @@ const HeroSection = () => {
             {/* Trust badges */}
             <div className="flex flex-wrap gap-6 text-primary-foreground/60 text-sm">
               <span className="flex items-center gap-1.5">
-                <CheckCircle className="w-4 h-4 text-accent" /> 5-Star Rated
+                <CheckCircle className="w-4 h-4 text-accent" /> Fully Insured
               </span>
               <span className="flex items-center gap-1.5">
                 <CheckCircle className="w-4 h-4 text-accent" /> Free Estimates

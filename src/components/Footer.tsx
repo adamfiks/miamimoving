@@ -20,7 +20,7 @@ const Footer = () => {
               <span className="font-display font-bold text-xl">Miami Moving</span>
             </div>
             <p className="text-primary-foreground/60 leading-relaxed mb-6 text-sm">
-              South Florida's most trusted moving company. Licensed, insured, and dedicated to making your move stress-free.
+              Local moving services within Miami-Dade, Broward, and Palm Beach counties. Licensed, insured, and dedicated to making your move stress-free.
             </p>
             <div className="space-y-3">
               <a
@@ -134,7 +134,7 @@ const Footer = () => {
             © {new Date().getFullYear()} Miami Moving. All rights reserved.
           </p>
           <p className="text-primary-foreground/40 text-sm">
-            Licensed & Insured • USDOT Registered
+            Licensed & Fully Insured
           </p>
         </div>
       </div>

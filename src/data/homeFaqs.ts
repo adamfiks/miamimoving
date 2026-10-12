@@ -5,9 +5,9 @@ export const homeFaqs = [
       "Local move costs depend on factors like the number of rooms, distance, and additional services (packing, disassembly). We offer free, no-obligation estimates — call us or fill out our quote form for an accurate price.",
   },
   {
-    question: "Do you offer same-day moving services?",
+    question: "Can you help with short-notice moves?",
     answer:
-      "Yes! Subject to availability, we can accommodate same-day moves. Call us at (786) 564-0471 to check availability and schedule your move.",
+      "We can help with short-notice moves when our schedule allows. Call us at (786) 564-0471 to check availability and discuss your move.",
   },
   {
     question: "Are my belongings insured during the move?",
@@ -22,7 +22,7 @@ export const homeFaqs = [
   {
     question: "What areas do you serve?",
     answer:
-      "We serve all of South Florida including Miami, Fort Lauderdale, Boca Raton, Hollywood, Aventura, West Palm Beach, and surrounding areas. Contact us if you're unsure — we likely cover your area.",
+      "We handle local moves within Miami-Dade, Broward, and Palm Beach counties, including Miami, Fort Lauderdale, Boca Raton, Hollywood, Aventura, West Palm Beach, and surrounding areas. Contact us if you're unsure — we likely cover your area.",
   },
   {
     question: "Can you move specialty items like pianos or artwork?",
