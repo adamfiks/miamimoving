@@ -9,12 +9,12 @@ export const SITE_URL = "https://miami-moving.com";
 export const BUSINESS_ID = `${SITE_URL}/#business`;
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.jpg`;
 
-export const HOME_TITLE = "Miami Moving | Professional Movers in Miami & South Florida";
+export const HOME_TITLE = "Miami Movers & Moving Company | Miami Moving";
 export const HOME_DESCRIPTION =
-  "Miami Moving offers reliable local residential and commercial moving services across Miami & South Florida. Licensed, insured movers. Call (786) 564-0471 for a free quote.";
+  "Movers in Miami and South Florida for condo, high-rise and residential moves. Plan your local move and request a free quote from our team at Miami Moving.";
 export const BLOG_TITLE = "South Florida Moving Tips & Resources | Miami Moving Blog";
 export const BLOG_DESCRIPTION =
-  "Moving tips, cost guides, and neighborhood insights for anyone moving within South Florida — from the team at Miami Moving.";
+  "Explore South Florida moving tips, local cost guides and neighborhood advice. Prepare for packing, condo access and your next local move with Miami Moving.";
 
 type JsonLd = Record<string, unknown>;
 
