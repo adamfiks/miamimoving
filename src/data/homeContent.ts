@@ -19,6 +19,7 @@ export const homeContent = {
     },
     {
       text: "Miami Moving serves local moves within Miami-Dade, Broward, and Palm Beach counties. From Miami neighborhoods to Fort Lauderdale and West Palm Beach, our focus stays on South Florida. Ready to make your next move feel more manageable? Request a free quote or call (786) 564-0471. Share your locations, preferred date, and the help you need, and we will take it from there.",
+      link: { href: "/service-areas", label: "Find your local service area" },
     },
   ],
 };

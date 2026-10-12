@@ -1,0 +1,42 @@
+export const serviceAreasContent = {
+  title: "Service Areas | Miami & South Florida Movers | Miami Moving",
+  description: "Explore local moving across Miami-Dade, Broward and Palm Beach. Find your area, plan condo or house access and request a free moving quote. Miami Moving.",
+  h1: "Areas We Serve: Movers Across Miami-Dade, Broward & Palm Beach",
+  intro: "A move across South Florida can bring a completely different kind of home, even when the drive is short. You might be leaving a driveway for a service elevator, trading an apartment for a townhouse, or making room for a growing business. Miami Moving serves local moves within Miami-Dade, Broward and Palm Beach counties. Find your neighborhood or city below, then share both addresses and the help you need for a free quote.",
+  groups: [
+    { name: "Miami-Dade County", intro: "From the urban core to established residential communities, preparation starts with the property. These local guides help you think through entrances, stairs, parking and building appointments.", areas: [
+      { slug: "miami-movers", name: "Miami", text: "City neighborhoods from Downtown and Edgewater to Little Havana and Coral Way bring towers, apartments and houses into the same local moving area." },
+      { slug: "brickell-movers", name: "Brickell", text: "Coordinate two tower appointments, service entrances and furniture measurements around Brickell Avenue, Brickell Key and the City Centre area." },
+      { slug: "miami-beach-movers", name: "Miami Beach", text: "Causeway access meets oceanfront condo policies and South Beach walk-up stairs. Plan the island approach and the approved loading route together." },
+      { slug: "coral-gables-movers", name: "Coral Gables", text: "Historic homes, Miracle Mile apartments and waterfront properties call for attention to doorway turns, driveway space and delivery instructions." },
+      { slug: "doral-movers", name: "Doral", text: "Downtown apartments, gated townhomes and airport-area offices need different access plans, from community gates to receiving bays." },
+      { slug: "kendall-movers", name: "Kendall", text: "Prepare West Kendall houses, The Hammocks townhomes or Dadeland apartments with a room plan and the right information about stairs and elevators." },
+      { slug: "hialeah-movers", name: "Hialeah", text: "Homes, duplexes and apartments often involve shared driveways or stair access. Identify the correct unit and a legal loading position before the day." },
+      { slug: "coconut-grove-movers", name: "Coconut Grove", text: "Tree-lined residential streets and bayfront condos require different carrying routes. Include gates, porch steps or the association’s delivery entrance." },
+      { slug: "aventura-movers", name: "Aventura", text: "Country Club Drive towers and waterfront communities put elevator windows and management approvals at the center of moving between local homes." },
+      { slug: "north-miami-movers", name: "North Miami", text: "Keystone Point and Sans Souci houses bring driveway and doorway planning, alongside private apartments near the FIU Biscayne Bay area." },
+      { slug: "north-miami-beach-movers", name: "North Miami Beach", text: "Eastern Shores condos and Sky Lake houses offer contrasting access, with the 163rd Street corridor connecting residential and business destinations." },
+      { slug: "sunny-isles-beach-movers", name: "Sunny Isles Beach", text: "Collins Avenue towers need coordinated dock and elevator bookings. Measure large furniture and confirm the building’s approved delivery route." },
+      { slug: "ojus-movers", name: "Ojus", text: "This unincorporated community has houses, duplexes and low-rise apartments. Use full addresses and describe shared parking or courtyard access." },
+    ] },
+    { name: "Broward County", intro: "Beach condominiums, canal-side homes and inland communities bring their own details to moving day. Share the receiving property’s access as carefully as the pickup address.", areas: [
+      { slug: "fort-lauderdale-movers", name: "Fort Lauderdale", text: "Las Olas condos, Victoria Park homes and waterfront neighborhoods can add bridge timing, gates and scheduled building delivery to the local plan." },
+      { slug: "hollywood-fl-movers", name: "Hollywood", text: "Hollywood Beach, Hollywood Lakes and Emerald Hills span condominium, house and apartment moves with different entrances and loading arrangements." },
+      { slug: "hallandale-beach-movers", name: "Hallandale Beach", text: "South Ocean Drive towers and Golden Isles homes call for distinct preparation, particularly when the move crosses between inland streets and the beach." },
+      { slug: "dania-beach-movers", name: "Dania Beach", text: "Beach condos and established homes sit near major airport approaches. Focus on the actual loading entrance, steps and permitted building hours." },
+      { slug: "pembroke-pines-movers", name: "Pembroke Pines", text: "Family homes, townhouses and 55-plus communities make room labels, gate authorization and thoughtful downsizing useful parts of preparation." },
+    ] },
+    { name: "Palm Beach County", intro: "Local moves continue into Palm Beach County, where home layouts and community procedures matter as much as the route north.", areas: [
+      { slug: "boca-raton-movers", name: "Boca Raton", text: "East Boca condos and West Boca homes include gated and 55-plus communities. Confirm the delivery entrance and the rooms receiving your furniture." },
+      { slug: "west-palm-beach-movers", name: "West Palm Beach", text: "Northwood and El Cid houses differ from Downtown towers. Plan mainland street access, doorway measurements and any reserved service elevator." },
+    ] },
+  ],
+  sharedHeading: "The Same Care, Planned Around Your Address",
+  sharedText: "Wherever you move locally, start with your inventory, preferred date and access at both properties. We offer residential and office moving, condo coordination, packing and unpacking, white-glove care and secure storage options. Ask about a COI when management requests one, and confirm elevator reservations directly with your building. Choose help for the tasks you need rather than treating every move as the same package. Request a free quote or call (786) 564-0471 to discuss your next step.",
+  faqs: [
+    { question: "Can you move between these three South Florida counties?", answer: "Yes. Miami Moving handles local moves within Miami-Dade, Broward and Palm Beach. Give both full addresses, the inventory and access details so the quote covers pickup and delivery rather than just the distance." },
+    { question: "What if my neighborhood is not listed here?", answer: "Send the complete pickup and delivery addresses with your quote request or call our team. We can discuss whether the local move fits our South Florida service area and what access information is needed." },
+    { question: "Can a local move include packing and storage?", answer: "Yes, ask about packing and unpacking support and secure storage options. Explain which items need help and any gap between properties so availability, timing and the requested arrangements can be discussed together." },
+    { question: "Do I need to arrange building access myself?", answer: "Contact management for your building’s current policy, elevator booking and loading instructions. Share any insurance requirements with us; we provide a COI when requested. Confirm the building’s approval before finalizing your moving schedule." },
+  ],
+};

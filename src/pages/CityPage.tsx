@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import CityQuoteForm from "@/components/CityQuoteForm";
 import { getCityBySlug, getCityFaqs, cities } from "@/data/cityData";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { ContentText, InlineText } from "@/components/ContentText";
 
 const CityPage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -45,7 +46,7 @@ const CityPage = () => {
                 Why Choose Miami Moving for Your {city.name} Relocation?
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                {city.intro}
+                <InlineText text={city.intro} />
               </p>
 
               <h3 className="font-display font-bold text-xl text-foreground mb-4">
@@ -55,7 +56,7 @@ const CityPage = () => {
                 {city.localDetails.map((detail) => (
                   <li key={detail} className="flex items-start gap-3 bg-card rounded-xl px-4 py-3.5 border border-border">
                     <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span className="text-card-foreground text-sm leading-relaxed">{detail}</span>
+                    <span className="text-card-foreground text-sm leading-relaxed"><InlineText text={detail} /></span>
                   </li>
                 ))}
               </ul>
@@ -63,9 +64,7 @@ const CityPage = () => {
               <p className="text-muted-foreground leading-relaxed mb-4">
                 We handle moves for {city.movingTypes.join(", ")} — no job is too big or too small.
               </p>
-              <p className="text-muted-foreground leading-relaxed">
-                {city.neighborhoodNote}
-              </p>
+              <ContentText text={city.neighborhoodNote} className="text-muted-foreground leading-relaxed" />
             </motion.div>
           </div>
         </section>

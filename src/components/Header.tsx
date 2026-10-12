@@ -16,7 +16,7 @@ const cityDropdownItems = cities
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/#services", dropdown: serviceDropdownItems },
-  { label: "Service Areas", href: "/#areas", dropdown: cityDropdownItems },
+  { label: "Service Areas", href: "/service-areas", dropdown: [{ label: "All Service Areas", href: "/service-areas" }, ...cityDropdownItems] },
   { label: "Why Us", href: "/#why-us" },
   { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "/#faq" },
@@ -88,7 +88,7 @@ const DropdownNav = ({
       </NavAnchor>
 
       <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-[60]">
-        <div className="bg-card border border-border rounded-xl shadow-xl py-2 min-w-[220px]">
+        <div className="bg-card border border-border rounded-xl shadow-xl py-2 min-w-[220px] max-h-[70vh] overflow-y-auto">
           {link.dropdown.map((item) => (
             <Link
               key={item.href}

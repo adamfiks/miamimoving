@@ -71,7 +71,7 @@ const Footer = () => {
 
           {/* Service Areas */}
           <div>
-            <h3 className="font-display font-bold text-lg mb-4">Service Areas</h3>
+            <h3 className="font-display font-bold text-lg mb-4"><Link to="/service-areas" className="hover:text-accent transition-colors">Service Areas</Link></h3>
             <ul className="space-y-2.5">
               {footerCities.map((city) => (
                 <li key={city.slug}>
@@ -101,9 +101,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#gallery" className="text-primary-foreground/60 hover:text-accent transition-colors text-sm">
-                  Gallery
-                </a>
+                <Link to="/service-areas" className="text-primary-foreground/60 hover:text-accent transition-colors text-sm">Areas We Serve</Link>
               </li>
               <li>
                 <Link to="/blog" className="text-primary-foreground/60 hover:text-accent transition-colors text-sm">

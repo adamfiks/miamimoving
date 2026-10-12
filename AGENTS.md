@@ -10,3 +10,6 @@
 - No `aggregateRating` in self-served schema (Google review-snippet policy).
 - New routes must be added to `getIndexableRoutes()` in `src/lib/seo.ts` so they are prerendered and listed in the sitemap.
 - Retired service URLs are defined in `src/lib/redirects.ts`; generate noindex static redirect documents and matching client redirects, never sitemap entries, because hosting does not process custom redirect configuration.
+- County groups and hub FAQs live in `src/data/serviceAreas.ts`; the hub and route SEO use the same data to keep all area links and FAQ schema aligned.
+- Contextual data links use the restricted `[label](/path)` format rendered by ContentText; never render raw data as HTML, so links remain safe and crawlable in SSR.
+- Blog FAQ data is optional and shared by the article accordion and SEO schema, so practical guides can include questions without duplicating their answers.

@@ -38,7 +38,7 @@ export const cities: CityData[] = [
       "Coconut Grove single-family homes",
       "Wynwood workspaces"
     ],
-    "neighborhoodNote": "A trip along US-1, Biscayne Boulevard or across Downtown can take a different amount of time depending on the hour. Keep building appointments realistic at both ends, especially when switching from a house to a tower. For a quote, include the floor, elevator availability, furniture sizes and any packing help needed; the city address alone does not describe the work.",
+    "neighborhoodNote": "A trip along US-1, Biscayne Boulevard or across Downtown can take a different amount of time depending on the hour. Keep building appointments realistic at both ends, especially when switching from a house to a tower. For a quote, include the floor, elevator availability, furniture sizes and any packing help needed; the city address alone does not describe the work.\n\n[Plan the building details with our condo and high-rise movers](/condo-high-rise-moving). Share the access details and packing help you need when requesting your free quote.",
     "faqs": [
       {
         "question": "What should I confirm before moving into a Brickell tower?",
@@ -78,7 +78,7 @@ export const cities: CityData[] = [
       "North Beach households",
       "small beach-area offices"
     ],
-    "neighborhoodNote": "Ocean Drive, Collins Avenue and local side streets are not interchangeable loading spaces. Confirm permitted parking with the property and relevant local authority when needed; never rely on an empty curb being available. Weekend activity and major events can change access, so share the precise moving date and entrance address rather than only the condominium name.",
+    "neighborhoodNote": "Ocean Drive, Collins Avenue and local side streets are not interchangeable loading spaces. Confirm permitted parking with the property and relevant local authority when needed; never rely on an empty curb being available. Weekend activity and major events can change access, so share the precise moving date and entrance address rather than only the condominium name.\n\n[Plan the building details with our condo and high-rise movers](/condo-high-rise-moving). Share the access details and packing help you need when requesting your free quote.\n\nRead our [guide to condo insurance paperwork and elevator reservations](/blog/miami-condo-moving-rules-coi-elevator-reservations) to organize the documents and appointments before your moving date.",
     "faqs": [
       {
         "question": "How do you plan a move over the causeways into Miami Beach?",
@@ -118,7 +118,7 @@ export const cities: CityData[] = [
       "Victoria Park townhomes",
       "Cypress Creek office suites"
     ],
-    "neighborhoodNote": "I-95 and US-1 serve different approaches to the city, and a beach destination may add an Intracoastal crossing. Check the relevant bridge information when planning timing, rather than assuming a fixed travel duration. Include the loading route at each end in your quote request; the last few hundred feet can involve more work than the road distance suggests.",
+    "neighborhoodNote": "I-95 and US-1 serve different approaches to the city, and a beach destination may add an Intracoastal crossing. Check the relevant bridge information when planning timing, rather than assuming a fixed travel duration. Include the loading route at each end in your quote request; the last few hundred feet can involve more work than the road distance suggests.\n\n[Plan the building details with our condo and high-rise movers](/condo-high-rise-moving). Share the access details and packing help you need when requesting your free quote.\n\nRead our [guide to condo insurance paperwork and elevator reservations](/blog/miami-condo-moving-rules-coi-elevator-reservations) to organize the documents and appointments before your moving date.",
     "faqs": [
       {
         "question": "Should I allow extra time for a Fort Lauderdale drawbridge crossing?",
@@ -158,7 +158,7 @@ export const cities: CityData[] = [
       "residents downsizing into 55-plus communities",
       "Federal Highway offices"
     ],
-    "neighborhoodNote": "A closing date and the date your community allows delivery may not line up automatically. Confirm possession, gate approval and any elevator reservation before committing to the schedule. If storage is needed between local homes, explain the likely duration and which items will be delivered first so arrangements can be discussed alongside the moving quote.",
+    "neighborhoodNote": "A closing date and the date your community allows delivery may not line up automatically. Confirm possession, gate approval and any elevator reservation before committing to the schedule. If storage is needed between local homes, explain the likely duration and which items will be delivered first so arrangements can be discussed alongside the moving quote.\n\n[Get help preparing your home with our residential moving service](/residential-moving). Share the access details and packing help you need when requesting your free quote.",
     "faqs": [
       {
         "question": "What should I ask a West Boca gatehouse before moving day?",
@@ -198,7 +198,7 @@ export const cities: CityData[] = [
       "Emerald Hills homes",
       "Downtown shops and offices"
     ],
-    "neighborhoodNote": "Hollywood Boulevard and Sheridan Street provide different routes between inland neighborhoods and the beach, where A1A and bridge approaches can affect timing. Leave room between pickup and a reserved unloading window. Packing needs, stair access and the actual carry from the truck should be included in the quote request, not left to be discovered at the destination.",
+    "neighborhoodNote": "Hollywood Boulevard and Sheridan Street provide different routes between inland neighborhoods and the beach, where A1A and bridge approaches can affect timing. Leave room between pickup and a reserved unloading window. Packing needs, stair access and the actual carry from the truck should be included in the quote request, not left to be discovered at the destination.\n\n[Get help preparing your home with our residential moving service](/residential-moving). Share the access details and packing help you need when requesting your free quote.",
     "faqs": [
       {
         "question": "Can movers unload directly from the Hollywood Beach Broadwalk?",
@@ -238,7 +238,7 @@ export const cities: CityData[] = [
       "inland apartment residents",
       "Federal Highway businesses"
     ],
-    "neighborhoodNote": "If pickup or delivery is on the barrier island, account for the Intracoastal crossing and A1A approach when arranging building appointments. Activity around Gulfstream Park can also affect the surrounding roads, without predicting a fixed delay. Share the calendar date, entrance location and approved time window so the schedule is tied to the actual move rather than a general neighborhood description.",
+    "neighborhoodNote": "If pickup or delivery is on the barrier island, account for the Intracoastal crossing and A1A approach when arranging building appointments. Activity around Gulfstream Park can also affect the surrounding roads, without predicting a fixed delay. Share the calendar date, entrance location and approved time window so the schedule is tied to the actual move rather than a general neighborhood description.\n\n[Plan the building details with our condo and high-rise movers](/condo-high-rise-moving). Share the access details and packing help you need when requesting your free quote.",
     "faqs": [
       {
         "question": "What should I check before moving into a South Ocean Drive condo?",
@@ -278,7 +278,7 @@ export const cities: CityData[] = [
       "gated townhomes",
       "local office suites"
     ],
-    "neighborhoodNote": "Before choosing movers in Aventura, gather the instructions for both buildings and compare their available time windows. Ask about deposits, elevator protection and how approval is confirmed; do not assume a phone reservation completes the process. Include the floor, large furniture and packing requirements in your free quote request, with paperwork requirements shared early enough to discuss them.",
+    "neighborhoodNote": "Before choosing movers in Aventura, gather the instructions for both buildings and compare their available time windows. Ask about deposits, elevator protection and how approval is confirmed; do not assume a phone reservation completes the process. Include the floor, large furniture and packing requirements in your free quote request, with paperwork requirements shared early enough to discuss them.\n\n[Plan the building details with our condo and high-rise movers](/condo-high-rise-moving). Share the access details and packing help you need when requesting your free quote.\n\nRead our [guide to condo insurance paperwork and elevator reservations](/blog/miami-condo-moving-rules-coi-elevator-reservations) to organize the documents and appointments before your moving date.",
     "faqs": [
       {
         "question": "Do Aventura condos require a certificate of insurance for movers?",
@@ -318,7 +318,7 @@ export const cities: CityData[] = [
       "duplex residents",
       "campus-area apartment renters"
     ],
-    "neighborhoodNote": "Tell us if the move is entirely within North Miami or ends elsewhere in South Florida; North Miami Beach is a separate city. A house-to-apartment move may replace driveway loading with stairs or a booked elevator. Include those destination details in the same quote request so the plan does not focus only on collecting belongings from the old home.",
+    "neighborhoodNote": "Tell us if the move is entirely within North Miami or ends elsewhere in South Florida; North Miami Beach is a separate city. A house-to-apartment move may replace driveway loading with stairs or a booked elevator. Include those destination details in the same quote request so the plan does not focus only on collecting belongings from the old home.\n\n[Get help preparing your home with our residential moving service](/residential-moving). Share the access details and packing help you need when requesting your free quote.",
     "faqs": [
       {
         "question": "What access details matter for a Keystone Point waterfront home?",
@@ -358,7 +358,7 @@ export const cities: CityData[] = [
       "NE 163rd Street apartments",
       "West Dixie Highway offices"
     ],
-    "neighborhoodNote": "A move west from Eastern Shores can change from controlled community access to an ordinary residential driveway within the same city. Check both locations independently, including when keys or approvals will be ready. Share any packing needs and the size of furniture that must travel through elevators, corridors or stairs; that is more useful than assuming all condominium buildings work alike.",
+    "neighborhoodNote": "A move west from Eastern Shores can change from controlled community access to an ordinary residential driveway within the same city. Check both locations independently, including when keys or approvals will be ready. Share any packing needs and the size of furniture that must travel through elevators, corridors or stairs; that is more useful than assuming all condominium buildings work alike.\n\n[Plan the building details with our condo and high-rise movers](/condo-high-rise-moving). Share the access details and packing help you need when requesting your free quote.",
     "faqs": [
       {
         "question": "What should I ask management before moving out of Eastern Shores?",
@@ -398,7 +398,7 @@ export const cities: CityData[] = [
       "seasonal apartment households",
       "residents moving between local towers"
     ],
-    "neighborhoodNote": "Crossing from the mainland via the William Lehman Causeway or NE 163rd Street adds an approach to the building appointment, not a guaranteed travel time. Leave a buffer and verify current access information. If you are switching towers, collect the policies from both managers; a single city-wide rule cannot establish elevator hours, paperwork or loading arrangements for every condominium.",
+    "neighborhoodNote": "Crossing from the mainland via the William Lehman Causeway or NE 163rd Street adds an approach to the building appointment, not a guaranteed travel time. Leave a buffer and verify current access information. If you are switching towers, collect the policies from both managers; a single city-wide rule cannot establish elevator hours, paperwork or loading arrangements for every condominium.\n\n[Plan the building details with our condo and high-rise movers](/condo-high-rise-moving). Share the access details and packing help you need when requesting your free quote.\n\nRead our [guide to condo insurance paperwork and elevator reservations](/blog/miami-condo-moving-rules-coi-elevator-reservations) to organize the documents and appointments before your moving date.",
     "faqs": [
       {
         "question": "How do I check whether furniture fits a Sunny Isles service elevator?",
@@ -438,7 +438,7 @@ export const cities: CityData[] = [
       "low-rise apartment renters",
       "small neighborhood businesses"
     ],
-    "neighborhoodNote": "Because Ojus is unincorporated, check the relevant Miami-Dade guidance when parking or street-use permission is needed, along with the property's own rules. Greynolds Park can help describe the general area, but provide the exact entrance address for the move. If the destination is a tower in neighboring Aventura, include that association's access policy as well as the pickup details.",
+    "neighborhoodNote": "Because Ojus is unincorporated, check the relevant Miami-Dade guidance when parking or street-use permission is needed, along with the property's own rules. Greynolds Park can help describe the general area, but provide the exact entrance address for the move. If the destination is a tower in neighboring Aventura, include that association's access policy as well as the pickup details.\n\n[Get help preparing your home with our residential moving service](/residential-moving). Share the access details and packing help you need when requesting your free quote.",
     "faqs": [
       {
         "question": "Should I list Ojus or a nearby city when requesting my moving quote?",
@@ -478,7 +478,7 @@ export const cities: CityData[] = [
       "Downtown condo owners and renters",
       "Palm Beach Lakes offices"
     ],
-    "neighborhoodNote": "Okeechobee Boulevard, US-1 and I-95 provide different approaches within the mainland area. Match the route to the receiving entrance and scheduled access rather than estimating the whole job from road mileage. If your local move involves a house and a Downtown tower, request the building's approval before selecting the final date, with packing and furniture details included in the same quote.",
+    "neighborhoodNote": "Okeechobee Boulevard, US-1 and I-95 provide different approaches within the mainland area. Match the route to the receiving entrance and scheduled access rather than estimating the whole job from road mileage. If your local move involves a house and a Downtown tower, request the building's approval before selecting the final date, with packing and furniture details included in the same quote.\n\n[Get help preparing your home with our residential moving service](/residential-moving). Share the access details and packing help you need when requesting your free quote.",
     "faqs": [
       {
         "question": "Is a West Palm Beach move the same as a Palm Beach island move?",
@@ -495,6 +495,326 @@ export const cities: CityData[] = [
       {
         "question": "What details help plan a Palm Beach Lakes office relocation?",
         "answer": "Provide the inventory, receiving hours and access at both premises. Label items for their new workspaces and mention garages, stairs or shared parking so the team can discuss a local commercial move based on the actual layout."
+      }
+    ]
+  },
+  {
+    "slug": "brickell-movers",
+    "name": "Brickell",
+    "metaTitle": "Brickell Movers | Local Moving Company in Miami, FL",
+    "metaDescription": "Plan your Brickell condo move with elevator bookings, COI paperwork and loading dock details. Get help with packing and a free local quote. Miami Moving.",
+    "h1": "Movers in Brickell, Miami",
+    "heroText": "Your next tower may be just a few blocks away, but getting there comfortably starts with two buildings, two appointments and a clear plan.",
+    "intro": "Brickell living puts your front door above a busy downtown neighborhood. Towers along Brickell Avenue and Brickell Bay Drive, apartments around Mary Brickell Village and residences near Brickell City Centre each have their own delivery arrangements. We help you prepare a local move around those practical details, from the furniture leaving your apartment to the room where it belongs next. If your search for movers in Brickell starts with a building name, add the unit, floor and service entrance so the quote reflects your actual home. For the broader neighborhood picture, explore our [City of Miami moving page](/miami-movers).",
+    "localDetails": [
+      "A tower-to-tower move works more smoothly when the pickup elevator and destination elevator leave enough time between them. Get the written policy from each manager, including permitted hours, insurance instructions and how reservations are confirmed. We provide a COI when requested; sharing the building’s instructions early helps the paperwork reach the correct recipient.",
+      "Brickell Bay Drive and the streets around Mary Brickell Village bring pedestrian activity, resident driveways and delivery vehicles into a compact area. Use the approved loading entrance rather than the address for visitors. Around the Metromover stations, keep the route from truck to building clear and legal.",
+      "Brickell Key adds an island approach and building-specific entry procedures to the day. Include any garage height limit, gate instruction or long hallway in the access details. Check service-elevator dimensions against your largest pieces, especially sectionals, dining tables and beds that may need disassembly before they leave the unit.",
+      "Packing for a high floor is easier when each box names its destination room and fragile contents. Keep keys, documents, medication and your first-night essentials with you. Set aside any furniture measurements management requests, and decide which items should arrive first. Our [condo and high-rise moving service](/condo-high-rise-moving) brings these building and household details together, so the move is planned around more than the drive."
+    ],
+    "movingTypes": [
+      "Brickell Avenue tower residents",
+      "Brickell Key condo households",
+      "apartments near Mary Brickell Village",
+      "small financial-district offices"
+    ],
+    "neighborhoodNote": "For a workspace near Brickell City Centre, label desks and files and confirm receiving hours. Include your inventory and packing needs in your free quote request. Ask about secure storage options if the new unit will be ready later.",
+    "faqs": [
+      {
+        "question": "Can you move my belongings between two Brickell towers?",
+        "answer": "Yes, we handle local moves between towers. Send the policies and elevator availability for both addresses, along with your inventory. The short road distance still leaves time needed for packing, protective handling, loading and delivery to the new floor."
+      },
+      {
+        "question": "What information does a Brickell building need for a COI?",
+        "answer": "Ask management for its written insurance instructions and recipient details, then send them to our team. We provide a certificate when requested. The building decides which documents it accepts, so obtain approval before the scheduled move."
+      },
+      {
+        "question": "How should I prepare for delivery to Brickell Key?",
+        "answer": "Confirm the vehicle entry procedure with your building, including where the driver should report and the approved loading location. Share those directions with the elevator window and any vehicle-clearance limits so arrival and unloading can be coordinated."
+      },
+      {
+        "question": "Should I measure furniture before leaving my Brickell apartment?",
+        "answer": "Measure bulky items and the usable elevator doorway, cabin and corridor turns. Photos can help explain awkward access. Tell us about pieces that come apart and those that do not, so handling can be discussed before moving day."
+      }
+    ]
+  },
+  {
+    "slug": "coral-gables-movers",
+    "name": "Coral Gables",
+    "metaTitle": "Coral Gables Movers | Local Moving Company, FL",
+    "metaDescription": "Coral Gables movers for historic houses, condos and local offices. Plan doorway access, packing and your South Florida move with a quote. Miami Moving.",
+    "h1": "Movers in Coral Gables, FL",
+    "heroText": "From a Mediterranean Revival house to an apartment near Miracle Mile, make room for a fresh start with a move planned around your home.",
+    "intro": "Coral Gables offers a different moving experience from Miami’s tower districts. Established homes sit along tree-lined streets, apartments and offices surround Miracle Mile, and the University of Miami area adds renters and households with changing calendars. In The Gables, start with entry steps, doorway widths, driveway space and your furniture. Miami Moving helps you plan a manageable local schedule. Whether you are settling into a house or simplifying into a condo, tell us what matters to you and what the new space can comfortably hold.",
+    "localDetails": [
+      "Mediterranean Revival homes and other historic properties can have distinctive arches, older doors and room arrangements. Measure the carrying route as well as your furniture, including turns through the entry and interior hall. Share photos of narrow openings and mention any piece that may need disassembly rather than leaving that decision to the last moment.",
+      "Near Miracle Mile, apartments and office suites share streets with shops and restaurants. Ask the property manager where moving vehicles can load, which entrance reaches the unit and whether stairs or a service elevator are involved. For a business move, label desks, files and equipment by their destination.",
+      "A home near the University of Miami can involve a lease change, a household move or a smaller apartment inventory. Confirm possession and key collection before selecting delivery time. Include exterior steps, shared driveways and the correct unit entrance in your quote details; a campus-area address alone does not explain how the home is reached.",
+      "For Gables Estates or another waterfront property, request any gate and delivery instructions from the community or owner. Driveway clearance, landscaping and the distance to the doorway deserve attention alongside the inventory. Keep pathways open without cutting across planted areas. Our [residential moving service](/residential-moving) can be discussed around your house, room layout and packing needs, including furniture that belongs upstairs or in a separate part of the property."
+    ],
+    "movingTypes": [
+      "historic-home households",
+      "Miracle Mile apartment residents",
+      "University of Miami area renters",
+      "local professional offices"
+    ],
+    "neighborhoodNote": "Le Jeune Road, Ponce de Leon Boulevard and US-1 offer different approaches. Share the approved entrance and clear a safe carrying path. Ask about secure storage options if closing dates differ, then request a free quote with both addresses and your inventory.",
+    "faqs": [
+      {
+        "question": "How do I prepare a Mediterranean Revival home for movers?",
+        "answer": "Measure furniture against doorways, arches and turns, and clear the planned carrying path. Point out delicate finishes or unusual steps. These details help you discuss furniture protection and disassembly without making assumptions based on the age or style of the house."
+      },
+      {
+        "question": "Can you handle a local move near Miracle Mile?",
+        "answer": "Yes. We move households and offices locally within South Florida. Ask your property about loading access and receiving hours, then share stairs, elevator details and your inventory so the quote reflects the particular apartment or workspace."
+      },
+      {
+        "question": "What should I confirm for a Gables Estates delivery?",
+        "answer": "Get current vehicle entry and delivery instructions from the relevant association or property contact. Share gates, driveway clearance and where loading is permitted. Approval requirements belong to the property, so use its instructions when coordinating the date."
+      },
+      {
+        "question": "Can I include packing for a Coral Gables house move?",
+        "answer": "Yes, packing support can be discussed for selected rooms or your whole home. Identify fragile pieces and what you will pack yourself. Keep personal documents and immediate essentials separate, and include packing needs when requesting your free quote."
+      }
+    ]
+  },
+  {
+    "slug": "doral-movers",
+    "name": "Doral",
+    "metaTitle": "Doral Movers | Local Moving Company in Doral, FL",
+    "metaDescription": "Doral movers for townhomes, gated homes, apartments and offices. Coordinate entry, stairs and packing for your local South Florida move. Miami Moving.",
+    "h1": "Movers in Doral, FL",
+    "heroText": "Bring your household or workspace to its next address with clear labels, confirmed community entry and a schedule that fits your day.",
+    "intro": "Doral combines newer apartment living around Downtown Doral with townhome neighborhoods, gated communities and active business districts near the airport. Your move may cross only a few local roads while changing from a garage entrance to a booked apartment elevator. It may also be an office relocation where boxed files and furniture need a different delivery plan. We start with the inventory and access at both ends, helping you prepare the work rather than treating every Doral address alike. Tell Miami Moving about your household, your workspace or the packing tasks you want help with, and request a free local quote.",
+    "localDetails": [
+      "In Downtown Doral, apartment and condominium deliveries can use a designated entrance rather than the public lobby. Obtain the building’s moving policy, elevator availability and any certificate of insurance request. If the garage or dock has a clearance limit, send it with the entrance address so the team can discuss the full path from vehicle to unit.",
+      "Townhomes often place bedrooms above the garage or living area, adding internal stairs to the carrying route. Label boxes for the correct floor and measure tight landings before packing large furniture. At a gated community, ask which entrance accepts moving vehicles and how residents authorize deliveries.",
+      "NW 41st Street, NW 36th Street and the Palmetto Expressway connect residential areas with office and warehouse districts. A local business move should identify the items involved and receiving hours at both premises. Separate desks, boxed stock and equipment by destination, and describe loading-bay access.",
+      "For a house-to-townhome transition, decide where furniture will fit before loading. Clear garage space, remove loose belongings from stairways and keep a first-night box outside the main shipment. Our [residential movers](/residential-moving) can help you plan the household side, while packing support can free up time for utilities, keys and community approvals. Ask about secure storage options if pickup and possession dates do not meet."
+    ],
+    "movingTypes": [
+      "Downtown Doral apartment residents",
+      "gated-community households",
+      "townhome families",
+      "airport-area offices and small businesses"
+    ],
+    "neighborhoodNote": "Match community appointments to your moving date and share the delivery entrance. Label essential home-office equipment for early placement. Request a free quote or call with your inventory, packing needs and access details.",
+    "faqs": [
+      {
+        "question": "What should I arrange before moving into Downtown Doral?",
+        "answer": "Ask the building for its moving policy, approved loading entrance and elevator reservation process. Share any insurance instructions and vehicle-clearance limits. Confirm possession of the apartment as well as the delivery appointment before choosing the final schedule."
+      },
+      {
+        "question": "How do I prepare a Doral townhome with interior stairs?",
+        "answer": "Label boxes by floor and destination room, and measure larger furniture against stair turns and doorways. Keep landings clear. Tell the team about the garage entrance, steps and items that may need disassembly when requesting your quote."
+      },
+      {
+        "question": "Can you move an office near NW 36th Street?",
+        "answer": "We offer local commercial moving within South Florida. Provide the furniture and equipment inventory, loading-bay details and permitted receiving hours. Include any handling requirements so the move’s scope can be discussed before arrangements are confirmed."
+      },
+      {
+        "question": "Which gate should movers use at my Doral community?",
+        "answer": "Use the gate designated by your association for deliveries. Ask about resident authorization, vehicle entry and permitted hours, then pass the current instructions to the moving team. Nearby communities can have different entry procedures."
+      }
+    ]
+  },
+  {
+    "slug": "kendall-movers",
+    "name": "Kendall",
+    "metaTitle": "Kendall Movers | Local Moving Company in Kendall, FL",
+    "metaDescription": "Kendall movers for houses, townhomes and Dadeland apartments. Prepare stairs, community access and packing for a free local moving quote. Miami Moving.",
+    "h1": "Movers in Kendall, FL",
+    "heroText": "Help your next home feel ready from the first delivery, whether you are moving a West Kendall house or settling into a Dadeland apartment.",
+    "intro": "Kendall stretches across a varied part of southern Miami-Dade, with single-family neighborhoods, townhouse communities and apartment living near Dadeland. West Kendall and The Hammocks bring household moves where garages, upstairs bedrooms and community entrances shape the work. Closer to US-1, a condo move may revolve around a service elevator instead. Your local move deserves a plan that follows your actual home, not just a postal area. Miami Moving discusses the belongings you are keeping, the rooms receiving them and the packing help that will make the transition easier for you.",
+    "localDetails": [
+      "For a West Kendall house, walk the route from each room to the loading position. Share driveway space and any limitations on moving-vehicle parking. Furniture intended for upstairs rooms at the new home should be identified in advance so unloading follows the receiving floor plan.",
+      "In The Hammocks and other association-managed neighborhoods, check the delivery gate, approved moving hours and guest-entry procedure with your own community. A townhouse can also have a short stairway that changes how a bed or sofa travels. Measure furniture and the narrowest turns, then tell the team what comes apart.",
+      "Kendall Drive, also SW 88th Street, connects homes and businesses across a busy corridor. Give the exact loading address and keep building appointments realistic. Where the trip reaches Dadeland near US-1, obtain the destination’s elevator window and service entrance before choosing a departure time.",
+      "A family move can include far more than the main furniture. Sort garage shelves, outdoor items and storage closets before your quote, and separate possessions you plan to donate or leave behind. Our [residential moving team](/residential-moving) can discuss packing support and furniture handling around that inventory. Keep school supplies, work devices and the first evening’s essentials nearby so you can settle in without opening every carton."
+    ],
+    "movingTypes": [
+      "West Kendall family households",
+      "The Hammocks townhome residents",
+      "Dadeland apartment renters",
+      "neighborhood offices"
+    ],
+    "neighborhoodNote": "Share the destination’s elevator policy as well as pickup access. Ask about secure storage options if keys will be ready later. Request your free quote with both properties, stairs, inventory and packing needs.",
+    "faqs": [
+      {
+        "question": "Can you move between West Kendall and Dadeland?",
+        "answer": "Yes, both are within our local South Florida service area. Include the house or townhouse access at pickup and the apartment’s delivery policy at the destination. Elevator appointments and stairs can matter more than the short driving distance."
+      },
+      {
+        "question": "How should I label boxes for a Kendall family move?",
+        "answer": "Use the destination room and, where helpful, the floor. Mark fragile contents and keep first-night essentials separate. A clear room plan helps you decide where items belong before delivery rather than sorting every box in the new entrance."
+      },
+      {
+        "question": "What should I ask The Hammocks association before booking?",
+        "answer": "Confirm your property’s entry instructions, delivery hours and any moving-vehicle parking rules. Ask how approval is recorded and pass that information to the team. Follow the current policy for your own community rather than a neighboring development."
+      },
+      {
+        "question": "Does a Dadeland condo move need insurance paperwork?",
+        "answer": "Many condominium buildings request a certificate of insurance. Ask management for the current requirements and send them to us; we provide a COI when requested. Also confirm elevator and loading access, which are separate parts of planning the delivery."
+      }
+    ]
+  },
+  {
+    "slug": "hialeah-movers",
+    "name": "Hialeah",
+    "metaTitle": "Hialeah Movers | Local Moving Company in Hialeah, FL",
+    "metaDescription": "Hialeah movers for single-family homes, duplexes, apartments and small businesses. Plan stairs, parking and packing for your local move. Miami Moving.",
+    "h1": "Movers in Hialeah, FL",
+    "heroText": "Moving a household or neighborhood business is easier when the right unit, loading space and destination rooms are clear from the start.",
+    "intro": "Hialeah’s residential blocks mix single-family homes, duplexes and apartment buildings, while local shops and workplaces line major corridors. A move here often starts with ordinary practical questions: which driveway is shared, how many stair flights lead to the unit and where a truck can legally stand. Nearby Hialeah Gardens is a separate municipality, so full addresses are useful when your local move crosses between the two. We help you organize the belongings and access details without adding complexity to the day. Tell Miami Moving what you are moving and what help you need, from a few furniture pieces to household packing.",
+    "localDetails": [
+      "At a duplex, identify the correct entrance and check how loading affects the neighboring household. A shared driveway may need an agreed time when vehicles are out of the way. Label cartons for the unit and destination rooms, and mention a rear doorway or exterior steps.",
+      "Apartment buildings can use stairs, shared walkways or an elevator, depending on the property. Ask the manager where moving vehicles are allowed and whether delivery hours apply. If management requests insurance paperwork, send the written instructions early; we provide a COI when requested. Include the carrying distance from the parking position to the unit in your quote details.",
+      "Palm Avenue, West 49th Street and Okeechobee Road provide different approaches to homes and business premises. Confirm a usable driveway or delivery entrance rather than arranging loading on the main road. For a small shop, separate fixtures and boxed stock from personal belongings.",
+      "A house move is a good moment to sort storage closets and garage belongings before packing. Decide which furniture will go to each room, keep hardware with the piece it belongs to and leave access paths clear. Our [residential moving service](/residential-moving) supports local household transitions with packing help available. Identify fragile items and any awkward furniture when you request a quote, so you can prepare with fewer last-minute decisions."
+    ],
+    "movingTypes": [
+      "single-family households",
+      "duplex residents",
+      "walk-up apartment renters",
+      "local shops and offices"
+    ],
+    "neighborhoodNote": "Include access at the receiving home, whether it is in Hialeah Gardens or another South Florida community. Ask about secure storage options between properties. Request your free quote with both addresses, the inventory and packing needs.",
+    "faqs": [
+      {
+        "question": "What details help with a Hialeah duplex move?",
+        "answer": "Identify the unit, shared driveway and entrance for furniture. Arrange a loading position that keeps neighboring access clear. Tell us about steps or a rear carrying route, and label boxes for the destination rooms before moving day."
+      },
+      {
+        "question": "Can you handle a local move to nearby Hialeah Gardens?",
+        "answer": "Yes, local South Florida moves can include both places. Give the full street addresses because Hialeah and Hialeah Gardens are separate municipalities. Include each property’s stairs, parking and delivery instructions so the quote covers both ends."
+      },
+      {
+        "question": "How should I prepare a walk-up apartment near West 49th Street?",
+        "answer": "Count stair flights, measure tight turns and ask management about permitted loading. Set aside the largest furniture measurements and clear the hallway. Share those details with the inventory so handling can be discussed before the scheduled move."
+      },
+      {
+        "question": "Can packing help be included for a small Hialeah business?",
+        "answer": "Ask about the inventory and packing support you need for boxed items and office belongings. Separate stock, files and fixtures, and tell us about any special handling requirements. The scope and access should be confirmed alongside your local moving quote."
+      }
+    ]
+  },
+  {
+    "slug": "coconut-grove-movers",
+    "name": "Coconut Grove",
+    "metaTitle": "Coconut Grove Movers | Local Moving Company, FL",
+    "metaDescription": "Coconut Grove movers for historic homes, bayfront condos and apartments. Plan narrow-street access, packing and a free local moving quote. Miami Moving.",
+    "h1": "Movers in Coconut Grove, FL",
+    "heroText": "A shaded house, a bayfront condo or an apartment near CocoWalk: your Grove move starts with a thoughtful route from the old room to the new one.",
+    "intro": "Coconut Grove is part of Miami, but its moving conditions deserve their own attention. Historic homes beneath a tree canopy, apartment living near CocoWalk and bayfront condominiums along South Bayshore Drive create different paths for furniture and boxes. A narrow street needs a different loading plan from a condo driveway. Miami Moving helps you gather the right access details for a local transition, whether you are staying in the Grove or heading to another South Florida neighborhood. Share your home, inventory and the packing support that would make your week easier.",
+    "localDetails": [
+      "For a historic house, measure the front entry, hallway turns and any porch steps before deciding how furniture will leave. Tree branches, landscaping and gates can affect the outdoor carrying path. Share driveway clearance and any piece that may need disassembly, particularly when an older room layout gives large items less space to turn.",
+      "Near CocoWalk and Main Highway, apartments and businesses can share compact streets and entrances. Ask the property contact where loading is permitted and which doorway reaches your space. Include stairs, courtyard gates and the distance from the truck to the unit.",
+      "Grove Isle and bayfront condominium moves depend on the association’s current entry and delivery procedures. Request the approved vehicle route, elevator reservation and insurance instructions rather than relying on a visitor arrival address. Our [condo and high-rise moving service](/condo-high-rise-moving) can be discussed around these requirements, including the size of furniture traveling from the service entrance to your new room.",
+      "Along South Bayshore Drive, the approach to a condo differs from the final turn onto a residential block. Plan time for legal loading and the carrying route instead of judging the job only by mileage. Pack items by destination room, keep fragile contents clearly marked and set aside a first-night kit. If you are moving between a house and an apartment, choose furniture placement before the delivery begins."
+    ],
+    "movingTypes": [
+      "historic-house households",
+      "Grove Isle condominium residents",
+      "CocoWalk-area apartment renters",
+      "neighborhood workspaces"
+    ],
+    "neighborhoodNote": "Confirm possession and the approved delivery window before booking. Share your inventory, entrances and packing needs, and ask about secure storage options if dates differ. Call or request a free quote to prepare your next local move.",
+    "faqs": [
+      {
+        "question": "How do you plan loading on a narrow Coconut Grove street?",
+        "answer": "We discuss the property’s approved loading point and the path to the home. Confirm local parking restrictions where necessary and share gates, driveway space and overhanging branches. Safe, legal access needs to be established before the moving vehicle arrives."
+      },
+      {
+        "question": "What should I ask before a Grove Isle condo move?",
+        "answer": "Get your building’s current delivery instructions, vehicle entry procedure and elevator reservation details. Send any COI requirements to the team. Approval and permitted hours are set by the association, so confirm them before finalizing your local moving date."
+      },
+      {
+        "question": "Can you move furniture from a historic Grove house?",
+        "answer": "Yes, local residential moving is offered. Share doorway measurements, porch steps and tight interior turns, and identify pieces that may come apart. Discuss delicate finishes and the carrying path so the handling plan reflects your particular home."
+      },
+      {
+        "question": "How should I prepare an apartment near CocoWalk?",
+        "answer": "Ask about the approved delivery entrance and legal vehicle position, then note stairs or shared corridors. Label boxes for the new rooms and keep essentials with you. Include packing needs and large furniture details when requesting your free quote."
+      }
+    ]
+  },
+  {
+    "slug": "dania-beach-movers",
+    "name": "Dania Beach",
+    "metaTitle": "Dania Beach Movers | Local Moving Company, FL",
+    "metaDescription": "Dania Beach movers for beach condos, older homes and apartments. Plan Federal Highway access, packing and your local South Florida move. Miami Moving.",
+    "h1": "Movers in Dania Beach, FL",
+    "heroText": "Bring the details of your beach condo, established home or apartment to a moving plan built for this part of Broward—not a generic coastal address.",
+    "intro": "Dania Beach sits near Fort Lauderdale-Hollywood International Airport and Port Everglades, with homes and apartments inland and condominium living closer to the beach. A local household move can involve older entrances, shared parking or a building’s scheduled elevator. Airport and port proximity describes the area, but it does not describe the access to your particular home. Miami Moving focuses on the rooms, furniture and loading arrangements at both addresses. If you are looking for Dania Beach movers, start with a free quote that includes your preferred date and the preparation tasks you want taken off your list.",
+    "localDetails": [
+      "For a beach-area condominium, ask management where delivery vehicles enter and whether a service elevator must be reserved. Request the written moving policy, including any COI instructions and permitted unloading hours. Compare the building appointment with the access available at pickup.",
+      "Older homes and smaller apartment buildings can bring entry steps, narrow doors or shared courtyard paths into the move. Measure bulky furniture and identify the intended exit before packing the last room. Describe driveway space and the walk from the truck to the entrance.",
+      "US-1, also Federal Highway, and Griffin Road connect residential streets with busier approaches near the airport. Provide the property’s actual delivery entrance and confirm a legal loading location. If your schedule includes a flight, keep travel documents, medication and an overnight bag separate from belongings going to the new home.",
+      "For a local shop or office, organize desks, boxed files and stock by the receiving room. Ask both properties about delivery hours and access before choosing the date. Household moves can also include packing help for fragile kitchenware or a full room. Our [residential moving service](/residential-moving) gives you a place to discuss those needs alongside stairs, furniture and the layout at your next address."
+    ],
+    "movingTypes": [
+      "beach-condo residents",
+      "established-home households",
+      "low-rise apartment renters",
+      "local offices and shops"
+    ],
+    "neighborhoodNote": "Leave a workable interval between pickup and a booked elevator at delivery. Share possession dates and entry approval, and ask about secure storage options for any gap. Request a free quote with your inventory and packing needs.",
+    "faqs": [
+      {
+        "question": "Can you help with a beach condo move in Dania Beach?",
+        "answer": "Yes, we offer local condominium moves. Get your association’s loading entrance, elevator window and any insurance request first. Share those details with the inventory so the plan includes both the building access and the items being delivered."
+      },
+      {
+        "question": "Does living near FLL change my household moving quote?",
+        "answer": "The quote depends on the belongings, services and access at your properties rather than airport proximity alone. Give us stairs, loading locations, packing needs and the preferred date. Mention travel plans only where they affect keys or your availability."
+      },
+      {
+        "question": "What should I check for an older Dania Beach home?",
+        "answer": "Measure large furniture against doors and hallway turns, and note entry steps or gates. Clear the path to a permitted loading point. Tell us about fragile finishes and pieces that may need disassembly so preparation fits the actual home."
+      },
+      {
+        "question": "Can you move my belongings locally across Broward County?",
+        "answer": "Yes, our service covers local South Florida moves, including Broward. Provide both complete addresses and each property’s delivery requirements. Ask about packing or secure storage options if those would help coordinate your pickup and move-in dates."
+      }
+    ]
+  },
+  {
+    "slug": "pembroke-pines-movers",
+    "name": "Pembroke Pines",
+    "metaTitle": "Pembroke Pines Movers | Local Moving Company, FL",
+    "metaDescription": "Pembroke Pines movers for family homes, townhomes and 55+ communities. Coordinate gates, stairs and packing for your free local quote. Miami Moving.",
+    "h1": "Movers in Pembroke Pines, FL",
+    "heroText": "Settle into your next home with furniture organized by room and community entry ready, from family neighborhoods to a downsizing move.",
+    "intro": "Pembroke Pines brings many local moves centered on houses, townhomes and association-managed communities rather than beachfront towers. A growing household may need help packing several bedrooms; someone downsizing into a 55-plus community may be deciding which furniture to keep. Pines Boulevard and I-75 connect different parts of the area, while the community entrance shapes the final approach. Miami Moving helps you prepare around your particular property and the new space you want to create. Share your inventory, stairs and preferred date so your free quote starts with the practical details of the move.",
+    "localDetails": [
+      "At a gated community, ask the association which entrance accepts moving vehicles and how approval is arranged. Confirm the permitted delivery hours and any parking instructions for your own address. Send those details along with possession of the new home.",
+      "Family homes and townhouses often spread belongings across garages, upstairs bedrooms and outdoor spaces. Measure large furniture against stair landings and doorway turns. Clear a route from the house to the loading position, keeping children’s items and everyday equipment separate from the boxes ready for the truck.",
+      "A move into a 55-plus community can be a chance to make the new home easier to use. Decide which pieces fit and where they should go, rather than sending every item to a smaller floor plan. Ask about packing help and secure storage options for belongings not going directly to the new rooms.",
+      "Pines Boulevard and the I-75 approaches serve different neighborhoods, and nearby Miramar is a separate city. Use complete pickup and delivery addresses, with the correct gate or driveway at each end. Our [residential moving service](/residential-moving) can be planned for a local house-to-house move or a change into an apartment. Include elevator requirements at the destination if that transition changes how furniture will be unloaded."
+    ],
+    "movingTypes": [
+      "family-household moves",
+      "gated townhome residents",
+      "residents downsizing into 55-plus communities",
+      "local apartment households"
+    ],
+    "neighborhoodNote": "Keep bedding, chargers and medication separate, and choose where large furniture belongs before delivery. Call about packing, stairs or secure storage options, or request a free quote with both addresses and your inventory.",
+    "faqs": [
+      {
+        "question": "What should I arrange for a gated Pembroke Pines community?",
+        "answer": "Get the delivery gate, resident authorization process and permitted moving hours from your association. Share the instructions and confirm that keys are ready. Entry rules vary by community, so use the policy for your own property when booking."
+      },
+      {
+        "question": "Can you help with downsizing into a local 55-plus community?",
+        "answer": "Yes, local household moving and packing support are available. Identify the furniture you are keeping and the new home’s layout. Discuss secure storage options if needed, and confirm community access before coordinating pickup and delivery."
+      },
+      {
+        "question": "How should I prepare a two-story Pembroke Pines home?",
+        "answer": "Label boxes by floor and room, measure large furniture against stairs and clear the landings. Include garage and outdoor items in the inventory. Tell us which pieces may need disassembly so loading and room placement can be discussed beforehand."
+      },
+      {
+        "question": "Is a move between Pembroke Pines and Miramar covered?",
+        "answer": "Yes, both are within the local South Florida service area. Provide full addresses and the access requirements for each property. The nearby city boundary does not replace planning gates, stairs, parking and any receiving building appointment."
       }
     ]
   }

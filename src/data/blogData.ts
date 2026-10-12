@@ -8,10 +8,137 @@ export interface BlogPost {
   publishDate: string;
   readTime: string;
   content: { heading: string; text: string }[];
+  faqs?: { question: string; answer: string }[];
   relatedLinks: { label: string; href: string }[];
 }
 
 export const blogPosts: BlogPost[] = [
+{
+  "slug": "miami-condo-moving-rules-coi-elevator-reservations",
+  "title": "Moving Into a Miami Condo: COI, Elevator Reservations & Building Rules Explained",
+  "metaTitle": "Miami Condo Moving Rules: COI & Elevators | Miami Moving",
+  "metaDescription": "Prepare your Miami condo move with steps for COI paperwork, elevator reservations, loading access and building deposits. Read our guide. Miami Moving.",
+  "excerpt": "A practical way to organize building paperwork, elevator appointments and loading access before your next Miami condo move.",
+  "category": "Moving Tips",
+  "publishDate": "2026-10-12",
+  "readTime": "9 min read",
+  "content": [
+    {
+      "heading": "Start With the Building, Not Just the Moving Date",
+      "text": "Getting the keys to a new condo is exciting. The next step is making sure your belongings can reach it on the day you expect. In Miami, a condominium move often involves permission to use common areas, an elevator appointment and insurance paperwork. Those arrangements belong to the particular building, not the city as a whole. Start by asking management for the current written move-in policy, then use it to coordinate your local moving plans.\n\nOur [condo and high-rise moving service](/condo-high-rise-moving) can be discussed around the requirements you share. Include the floor, inventory, approved loading entrance and your preferred date. That gives the moving conversation a useful starting point while leaving management responsible for approving the building arrangements."
+    },
+    {
+      "heading": "What a Certificate of Insurance Actually Shows",
+      "text": "A certificate of insurance, commonly called a COI, summarizes insurance information for the company named on it. It can identify the insurer, policy types, coverage dates and limits. Buildings request it to review the mover’s insurance before allowing work in shared areas. A certificate is not the insurance policy itself, and it does not replace a conversation about the protection that applies to your household belongings.\n\nAsk management for the exact certificate instructions and the contact that should receive it. Some requests include additional insured wording or endorsements, which need to be addressed by the insurer or authorized insurance representative. Send the written request to the moving team rather than trying to create or edit the document yourself. Miami Moving provides a COI when requested; building acceptance and any additional requirements should be confirmed before moving day."
+    },
+    {
+      "heading": "Request the Complete Moving Policy",
+      "text": "Ask for more than a verbal time estimate from the front desk. Obtain the policy covering permitted days and hours, elevator booking, delivery entrance, vehicle limits and protection of shared spaces. Find out who approves the reservation and whether insurance documents, resident authorization or a building deposit must be received first. Save the instructions in one place so changes can be checked against the same information.\n\nResidents planning a [Brickell move](/brickell-movers) may be coordinating two nearby towers with different procedures. Treat each one separately. A resident elevator, visitor lobby or ordinary parking garage may not be approved for moving furniture. The correct service entrance is part of your moving address, even if it is on another side of the block."
+    },
+    {
+      "heading": "Reserve the Elevator and Loading Area Together",
+      "text": "An elevator slot and a dock appointment may be handled together or separately. Ask which spaces your reservation covers and whether another delivery could share them. Confirm the usable time, not just the time the truck can enter. Loading, protective handling and repeated trips between the unit and vehicle all need to fit the approved window. Share the appointment with your mover before the schedule is finalized.\n\nMeasure your largest furniture against the service-elevator door and cabin, plus hallway turns and the unit entrance. Include sectionals, bed frames and tall cabinets. If an item may not fit, discuss disassembly or another approved handling approach in advance. A larger elevator reservation does not make an oversized piece smaller, and a nearby destination still requires time for safe unloading."
+    },
+    {
+      "heading": "Understand Deposits and Permitted Hours",
+      "text": "Some associations request a move-in or move-out deposit related to use of common areas. Ask who receives it, how it is paid, what the refund process is and how the building records any deductions. Keep the receipt and written instructions. This is separate from your mover’s quote; there is no single deposit amount or refund policy that applies across Miami condominium buildings.\n\nCheck weekend, holiday and after-hours restrictions before choosing a date around work or a lease handover. Also ask what happens if an approved window needs to change. If your new unit is not ready when the old building requires departure, discuss the schedule with both managers and your moving team. Making those calls early gives you more options than trying to solve a gap at the loading dock."
+    },
+    {
+      "heading": "Protect Shared Areas Without Blocking Residents",
+      "text": "Buildings may specify elevator padding, floor coverings or a designated furniture route. Share those requirements so protection can be discussed before arrival. Identify delicate finishes and narrow turns between the dock and unit. Keep doors, emergency exits and residents’ paths available throughout the move. Protection materials should suit the surface and the building’s instructions, rather than being placed wherever there happens to be room.\n\nFor [Sunny Isles Beach condo moves](/sunny-isles-beach-movers), the final approach and delivery lane are as important as the route along Collins Avenue. The same principle applies across South Florida: use the approved entrance and keep the appointment realistic. A clearly labeled inventory helps the team bring items to the correct room without repeated sorting in a common hallway."
+    },
+    {
+      "heading": "Coordinate Move-Out and Move-In as Two Approvals",
+      "text": "Your departing building may require its own COI, elevator reservation and inspection of shared areas. The new association may use different paperwork or hours. Create a simple list with a contact, entrance and approved time for each property. Add key collection and possession of the new unit. Share changes promptly, particularly if an elevator becomes unavailable or management revises access instructions.\n\nKeep important documents, medication, chargers and a first-night bag with you. Pack boxes by destination room and mark fragile contents. Avoid filling a reserved elevator with loose bags that are difficult to stack or carry. If you want packing help, identify the rooms or pieces before your quote so preparation can be included in the discussion."
+    },
+    {
+      "heading": "Your Condo Moving Checklist",
+      "text": "Before booking: obtain both buildings’ written policies, check permitted dates, confirm possession and share the inventory. Before the move: send insurance instructions, secure the required approvals, reserve the elevator and loading area, and measure bulky furniture. Confirm deposits directly with management and keep proof of payment with your moving documents.\n\nThe day before: recheck the arrival window and entrance, charge your phone, label destination rooms and clear the route inside the apartment. On moving day: keep essentials with you, follow the approved common-area path and note any concerns with the appropriate contact. After delivery: check rooms and common spaces, return access devices as required and ask management about the deposit review. Request a free quote or call (786) 564-0471 to talk through the local move with your building information ready."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Is a COI the same as insurance for my furniture?",
+      "answer": "No. A COI summarizes the mover’s insurance information for the recipient reviewing it. Ask your mover separately about the protection applying to household goods, any available options and the claims process. Building approval does not answer those questions for you."
+    },
+    {
+      "question": "Who books the condo service elevator?",
+      "answer": "Follow your association’s reservation process. It may require the resident to book directly or obtain management approval. Coordinate the available window with the moving team, and confirm whether dock access is included or needs a separate appointment."
+    },
+    {
+      "question": "Can I use one approval for both condo buildings?",
+      "answer": "Confirm each property independently. Insurance recipients, delivery entrances, deposits and permitted hours can differ. Keep separate written approvals and share both policies so pickup and delivery are planned together without treating the two associations as one."
+    },
+    {
+      "question": "What if my furniture will not fit the service elevator?",
+      "answer": "Share measurements and photos with your mover before the scheduled day. Discuss whether disassembly or another building-approved approach is practical. Get management’s permission for any alternate route; do not rely on improvising access after the item reaches the dock."
+    }
+  ],
+  "relatedLinks": []
+},
+{
+  "slug": "moving-during-hurricane-season-south-florida",
+  "title": "Moving During Hurricane Season in South Florida: A Practical Guide",
+  "metaTitle": "Moving During Hurricane Season | South Florida Guide",
+  "metaDescription": "Plan a South Florida move during hurricane season with forecast checks, flexible timing, rain protection and a practical packing checklist. Miami Moving.",
+  "excerpt": "Keep your local move organized through summer rain and changing forecasts, with a clear plan if a storm threatens the scheduled day.",
+  "category": "Moving Tips",
+  "publishDate": "2026-10-12",
+  "readTime": "9 min read",
+  "content": [
+    {
+      "heading": "A Seasonal Plan, Not a Prediction",
+      "text": "Atlantic hurricane season runs from June 1 through November 30, according to the National Hurricane Center. That calendar does not tell you what the weather will be on your moving day. A useful plan combines ordinary rain preparation with flexibility if a tropical system threatens South Florida. You can organize your packing and building appointments while leaving room to respond to official forecasts and local safety instructions.\n\nFor a [local South Florida move](/local-moving), discuss your preferred date, access and what would happen if weather changes the schedule. Ask how a postponement would be handled rather than expecting a guarantee that a truck can operate in any conditions. Keeping people safe takes priority over a calendar appointment, even when the drive between homes is short."
+    },
+    {
+      "heading": "Use Official Forecasts and Know What They Mean",
+      "text": "Follow the National Hurricane Center for tropical outlooks and advisories, and the National Weather Service for local weather information. County emergency management and local authorities provide instructions relevant to your location. A forecast cone alone is not a map of every possible impact; rain, wind and flooding can affect places beyond a storm’s center. Use current official information instead of relying on an old screenshot or a neighborhood rumor.\n\nAs moving day approaches, check the forecast and discuss any developing concern with your mover and both properties. A watch, warning, road closure or evacuation instruction may change what is practical. Decisions should reflect the conditions and guidance for the date, not a promise made before a system developed. Never travel through flooded roads to keep a delivery appointment."
+    },
+    {
+      "heading": "Build Flexibility Into Keys, Leases and Elevators",
+      "text": "Ask your landlord or property contact what can be adjusted if a storm interrupts the handover. Confirm when keys will be available and how to reach management if the office closes. At a condo, find out whether elevator bookings can be moved and how residents will learn about changed access. Keep these contacts together rather than searching for them while a building is securing its common areas.\n\nYour mover’s availability, the building’s schedule and your possession dates all need to line up again after a postponement. Ask about the process, any applicable terms and what information the team needs from you. Leave a practical plan for essential belongings if delivery occurs later than hoped. Flexibility is useful only when the people responsible know what has changed."
+    },
+    {
+      "heading": "Pack for Humidity Without Trapping Moisture",
+      "text": "Start with dry belongings and sound cartons. Damp clothing, towels or furniture can carry moisture into a closed box, so let items dry before packing. Label fragile contents and separate electronics and important papers for extra attention. Weather-resistant outer protection can help during exposure, but tightly sealing an already wet item can trap moisture instead of solving the problem.\n\nOur [packing and unpacking service](/packing-and-unpacking) can be discussed for rooms or fragile items you want help preparing. Tell us about sensitive materials and what you will pack yourself. Keep passports, lease documents, medication and irreplaceable small valuables with you. Choose a personal essentials bag that remains easy to reach if your move or your own travel plans change."
+    },
+    {
+      "heading": "Prepare the Route From Door to Truck for Rain",
+      "text": "A covered entrance can reduce exposure, but the full carrying path still matters. Tell your mover about open walkways, exterior stairs and the distance from legal loading to the home. Ask how rain protection and loading will be handled for the actual property. Avoid leaving boxes outdoors while waiting for the vehicle, and keep the staging area inside until items are ready to be carried.\n\nWet floors and steps need attention before anyone carries furniture over them. Keep the path clear and notify the team of leaks or slippery surfaces. Heavy rain, lightning, strong winds or unsafe access can require a pause or rescheduling rather than simply more wrapping. Do not cover emergency exits or create a walkway obstruction in an attempt to shelter cartons."
+    },
+    {
+      "heading": "Check Your Condo’s Storm Procedures",
+      "text": "Buildings may secure loading areas, change deliveries, restrict elevator use or ask residents to clear balconies when a storm approaches. Request your own management’s instructions and the communication method it uses for updates. Confirm whether the moving appointment remains approved. An ordinary reservation is not permission to continue during a building closure or an emergency restriction.\n\nAsk about the departure property as well as the new one. A building preparing for severe weather may have staff priorities and access changes that affect pickup. Share those changes with the moving team promptly. If the move cannot proceed, keep your boxes indoors and pathways clear while you follow the property’s safety instructions and the guidance of local authorities."
+    },
+    {
+      "heading": "If a Storm Threatens Moving Day",
+      "text": "Contact your mover and property managers as soon as an official forecast creates a concern for your date. Explain any lease deadline or key issue, then discuss whether postponement is appropriate. Ask how the revised date will be confirmed and which building approvals need to be renewed. Do not pack away supplies you may need while waiting, including chargers, flashlights, medication and personal documents.\n\nIf pickup and delivery can no longer happen together, ask about [secure storage options](/storage-solutions) and the arrangements relevant to your belongings. Confirm availability, timing and access before relying on storage as the solution. It is not a substitute for an evacuation plan or a guarantee of protection from every weather event. Follow official safety directions first, then coordinate the household logistics."
+    },
+    {
+      "heading": "Before, During and After: A Practical Checklist",
+      "text": "Before the date: collect mover and management contacts, confirm possession and rescheduling procedures, photograph valuable items for your records, and pack an accessible essentials bag. Check official forecasts and keep cartons indoors and dry. Confirm the loading entrance and report any exposed steps, leaking roof or access concern that changes the carrying route.\n\nIf conditions worsen: call the relevant contacts, obtain revised appointments when appropriate and follow emergency instructions. After a postponement: check that the properties are accessible and the building has reopened for deliveries before rebooking. Do not assume roads and elevators are ready just because rain has stopped. At delivery, inspect outer cartons for moisture and unpack sensitive items promptly when safe, allowing anything damp to dry rather than returning it to a sealed box. Request a free quote or call (786) 564-0471 to discuss a local move with practical preparation and clear expectations."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Does hurricane season mean I should avoid every summer move?",
+      "answer": "No. The season is a planning window, not a daily forecast. Prepare for rain, keep some scheduling flexibility and follow current official weather information. Discuss changes if a tropical system or unsafe conditions threaten your actual moving date."
+    },
+    {
+      "question": "Should I continue moving if there is an evacuation order?",
+      "answer": "Follow the evacuation and safety instructions for your location. Contact your moving company when safe to coordinate a postponement. A furniture delivery or elevator reservation should not take priority over official directions intended to protect people."
+    },
+    {
+      "question": "Will my reserved condo elevator remain available during a storm?",
+      "answer": "Ask management. Buildings can change access or restrict deliveries under their storm procedures. Confirm the appointment before proceeding and share updates with your mover. A reservation made earlier does not guarantee access during an emergency or building closure."
+    },
+    {
+      "question": "Can storage help if weather separates pickup and delivery?",
+      "answer": "Secure storage options may be discussed, with availability, access and timing confirmed for your move. Ask about the specific arrangements before making plans. Keep emergency essentials with you and follow official safety guidance rather than relying on storage to solve every disruption."
+    }
+  ],
+  "relatedLinks": []
+},
   {
     slug: "how-much-does-it-cost-to-move-in-miami",
     title: "How Much Does It Cost to Move in Miami? (2026 Pricing Guide)",
