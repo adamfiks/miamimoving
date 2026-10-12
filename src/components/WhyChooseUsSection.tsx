@@ -25,8 +25,8 @@ const reasons = [
   },
   {
     icon: Clock,
-    title: "On-Time Guarantee",
-    description: "We show up when we say we will. Your schedule matters — and we respect it.",
+    title: "Moving Schedule",
+    description: "We discuss timing and access requirements with you before moving day.",
   },
   {
     icon: Star,

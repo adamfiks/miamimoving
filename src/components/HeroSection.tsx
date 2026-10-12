@@ -72,7 +72,7 @@ const HeroSection = () => {
             </h1>
             <p className="text-lg text-primary-foreground/80 mb-8 max-w-lg leading-relaxed">
               Professional residential & commercial moving across South Florida.
-              Upfront pricing, careful handling, and guaranteed on-time delivery.
+              Upfront pricing, careful handling, and clear communication.
             </p>
 
             <div className="flex flex-wrap gap-4 mb-8">
