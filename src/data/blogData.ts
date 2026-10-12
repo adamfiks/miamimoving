@@ -23,7 +23,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "6 min read",
     content: [
       { heading: "The Short Answer", text: "Local moves in Miami-Dade, Broward, and Palm Beach counties typically run based on crew size and hours on site rather than a flat rate — most studio and one-bedroom moves take a 2-person crew 2-4 hours, while a 3-4 bedroom home can take a 3-4 person crew 6-10 hours." },
-      { heading: "What Actually Drives the Price Up or Down", text: "Beyond the size of your home, a few South Florida-specific factors matter more than people expect: whether your building requires a certified Certificate of Insurance (COI) and reserved elevator time, whether you're on a high floor with a long carry to the truck, stairs versus elevator access, and how much packing you want done for you versus doing yourself. Summer moves (peak season, May through September) also tend to book up faster and can carry slightly higher demand pricing than moving in the fall or winter." },
+      { heading: "What Shapes Your Moving Estimate", text: "Alongside home size, your estimate depends on access and the services requested. Share any building requirements for a certificate of insurance (COI), reserved elevator time, stairs, the carry to the truck and packing help. Confirm the available moving date and your building's delivery window before booking." },
       { heading: "Understanding Your Local Moving Estimate", text: "For local South Florida moves, confirm the hourly rate, crew size, any truck fee, and services included in your estimate. Ask how access requirements and packing affect the total, and get the details in writing before booking." },
       { heading: "How to Get an Accurate Quote", text: "Share your home size, furniture details, stairs, elevator access, packing needs, and building restrictions when requesting a quote. These details help the moving team explain the expected costs before moving day." },
     ],
@@ -62,7 +62,7 @@ export const blogPosts: BlogPost[] = [
     publishDate: "2026-03-18",
     readTime: "7 min read",
     content: [
-      { heading: "8 Weeks Out", text: "Start researching and booking your moving company, especially if you're moving during peak season (May-September). Begin sorting through belongings and setting aside anything to donate or sell — the less you move, the less it costs." },
+      { heading: "8 Weeks Out", text: "Start researching your moving company and checking available dates alongside your building's schedule. Sort through belongings and set aside anything to donate or sell, then make an inventory of the items going to your new home." },
       { heading: "4-6 Weeks Out", text: "Confirm your moving date in writing, request a COI if your building requires one, and start collecting packing supplies. This is also the time to research your new South Florida neighborhood's schools and utility services." },
       { heading: "2-3 Weeks Out", text: "Begin packing non-essential rooms first. Notify utility companies of your move date, submit a change of address with USPS, and update your address with your bank and any subscriptions. Reserve your building's elevator or loading dock window if required." },
       { heading: "1 Week Out", text: "Pack a separate 'first night' box with essentials — toiletries, chargers, a change of clothes, basic kitchen items. Confirm final details with your movers: arrival time, crew size, and payment method. Empty and defrost the refrigerator if it's moving." },
@@ -123,10 +123,10 @@ export const blogPosts: BlogPost[] = [
     publishDate: "2026-05-08",
     readTime: "5 min read",
     content: [
-      { heading: "Peak Moving Season in South Florida", text: "Like most of the country, May through September is peak moving season — driven by school schedules and warmer weather elsewhere pushing people to relocate. Movers book up faster and prices can run higher during these months, so if you have flexibility, booking 4-6 weeks ahead matters even more than usual." },
+      { heading: "Planning Around the School Calendar", text: "School breaks, lease dates and work commitments can shape when a household is ready to move. Check available dates early and confirm your building's permitted moving hours before choosing a day, especially when several schedules need to line up." },
       { heading: "Hurricane Season Is a Real Factor Here", text: "Atlantic hurricane season runs June through November, peaking in August and September. It doesn't mean you shouldn't move during this window, but it's worth building flexibility into your moving date and asking your mover how they handle rescheduling around a storm watch or warning." },
-      { heading: "The Case for Fall and Winter Moves", text: "October through April tends to bring lower demand, more scheduling flexibility, and often better pricing. It's also outside of peak hurricane risk and South Florida's harshest summer heat and humidity, which makes moving day itself more comfortable." },
-      { heading: "Day-of-Week and Time-of-Month Considerations", text: "Weekday moves and mid-month dates are typically less in-demand than weekend and end-of-month/beginning-of-month moves (when most leases turn over), which can mean more availability and sometimes better rates." },
+      { heading: "Considering Fall and Winter Dates", text: "If your timeline allows a fall or winter move, review the weather forecast and access arrangements for the date you choose. Seasonal timing does not replace checking the building's moving policy, the team's availability and your home's handover date." },
+      { heading: "Day-of-Week and Time-of-Month Considerations", text: "Lease turnover, closing dates and condominium delivery hours can limit your options. Confirm possession of the new home and approval at both buildings before booking; a convenient day on your calendar may not be a permitted moving day for the property." },
     ],
     relatedLinks: [
       { label: "Local Moving Services", href: "/local-moving" },
