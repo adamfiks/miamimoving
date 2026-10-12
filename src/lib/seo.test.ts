@@ -37,7 +37,7 @@ describe("route SEO schema", () => {
 
   it("canonicals are https://miami-moving.com with no www or trailing slash", () => {
     for (const r of getIndexableRoutes()) {
-      const c = getRouteSeo(r.path).canonical!;
+      const c = getRouteSeo(r.path).canonical;
       expect(c).toBe(`https://miami-moving.com${r.path}`);
     }
   });

@@ -4,8 +4,9 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import { retiredRoutes, buildRedirectHtml } from "../src/lib/redirects";
 
-// Date of the last significant content/markup change for all pages. Update per page when content changes.
+// Significant sitewide content cleanup date (including shared navigation/footer).
 const LASTMOD = "2026-10-12";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -79,6 +80,11 @@ function buildHtml(routePath: string, seo: Seo, body: string): string {
 }
 
 const routes = mod.getIndexableRoutes();
+for (const r of retiredRoutes) {
+  const outDir = path.join(distDir, r.from.slice(1));
+  fs.mkdirSync(outDir, { recursive: true });
+  fs.writeFileSync(path.join(outDir, "index.html"), buildRedirectHtml(r.to, mod.SITE_URL), "utf-8");
+}
 for (const r of routes) {
   const seo = mod.getRouteSeo(r.path);
   if (seo.noindex) throw new Error(`[prerender] Route ${r.path} resolved to a noindex page`);

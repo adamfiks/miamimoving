@@ -65,7 +65,7 @@ const CityQuoteForm = ({ cityName }: CityQuoteFormProps) => {
             </h2>
             <p className="text-primary-foreground/80 text-lg mb-6 leading-relaxed">
               Ready to move? Fill out the form and our {cityName} moving team will
-              contact you within 15 minutes with a free, no-obligation estimate.
+              reach out shortly about your free, no-obligation estimate.
             </p>
             <div className="flex flex-col gap-3 mb-6">
               <a

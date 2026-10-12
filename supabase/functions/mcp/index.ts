@@ -10,18 +10,18 @@ import { defineTool } from "npm:@lovable.dev/mcp-js@0.22.2";
 
 // src/lib/mcp/data.ts
 var mcpServices = [
-  { slug: "local-moving", title: "Local Moving", shortDescription: "Fast, reliable local moves within Miami-Dade, Broward, and Palm Beach counties. Same-day availability.", url: "https://miami-moving.com/local-moving" },
+  { slug: "local-moving", title: "Local Moving", shortDescription: "Local moves within Miami-Dade, Broward, and Palm Beach counties. Short-notice moves when our schedule allows.", url: "https://miami-moving.com/local-moving" },
   { slug: "commercial-moving", title: "Commercial Moving", shortDescription: "Minimize business downtime with our efficient office and commercial relocation services.", url: "https://miami-moving.com/commercial-moving" },
   { slug: "residential-moving", title: "Residential Moving", shortDescription: "From studios to mansions \u2014 we treat your home and belongings with the utmost care.", url: "https://miami-moving.com/residential-moving" },
-  { slug: "packing-and-unpacking", title: "Packing & Unpacking", shortDescription: "Professional packing with premium materials. We handle fragile items, artwork, and electronics.", url: "https://miami-moving.com/packing-and-unpacking" },
-  { slug: "white-glove-moving", title: "White Glove Moving", shortDescription: "Premium, full-service moving with extra care for high-value items and luxury homes.", url: "https://miami-moving.com/white-glove-moving" },
-  { slug: "storage-solutions", title: "Storage Solutions", shortDescription: "Secure, climate-controlled short-term and long-term storage at competitive rates.", url: "https://miami-moving.com/storage-solutions" }
+  { slug: "packing-and-unpacking", title: "Packing & Unpacking", shortDescription: "Professional packing with protective materials for fragile items, artwork, and electronics.", url: "https://miami-moving.com/packing-and-unpacking" },
+  { slug: "white-glove-moving", title: "White Glove Moving", shortDescription: "Full-service local moving with extra care for high-value items and homes.", url: "https://miami-moving.com/white-glove-moving" },
+  { slug: "storage-solutions", title: "Storage Solutions", shortDescription: "Secure storage options for short-term and long-term moving needs.", url: "https://miami-moving.com/storage-solutions" }
 ];
 var mcpCities = [
   { slug: "miami-movers", name: "Miami", url: "https://miami-moving.com/miami-movers", heroText: "Whether you're relocating across Brickell, moving into a Wynwood loft, or leaving Coral Gables for a new chapter \u2014 our Miami moving crew handles it all with care.", intro: "Professional movers serving Miami \u2014 high-rise condos, single-family homes, offices, and everything in between." },
   { slug: "miami-beach-movers", name: "Miami Beach", url: "https://miami-moving.com/miami-beach-movers", heroText: "From oceanfront condos on Collins Avenue to cozy apartments in North Beach \u2014 we make every Miami Beach move stress-free and efficient.", intro: "Expert Miami Beach movers experienced with Art Deco buildings, oceanfront high-rises, and boutique offices." },
   { slug: "fort-lauderdale-movers", name: "Fort Lauderdale", url: "https://miami-moving.com/fort-lauderdale-movers", heroText: "Relocating to or from Fort Lauderdale? Our experienced moving crews deliver fast, careful service across Broward County.", intro: "Full-service Fort Lauderdale movers for waterfront homes, downtown condos, and corporate offices." },
-  { slug: "boca-raton-movers", name: "Boca Raton", url: "https://miami-moving.com/boca-raton-movers", heroText: "Moving to or from Boca Raton? Trust our professional team to handle your valuables with the care and attention that Boca residents expect.", intro: "Premium white-glove moving services for Boca Raton luxury estates and gated communities." },
+  { slug: "boca-raton-movers", name: "Boca Raton", url: "https://miami-moving.com/boca-raton-movers", heroText: "Moving to or from Boca Raton? Trust our professional team to handle your valuables with the care and attention that Boca residents expect.", intro: "Local moving services for Boca Raton estates and gated communities." },
   { slug: "hollywood-fl-movers", name: "Hollywood", url: "https://miami-moving.com/hollywood-fl-movers", heroText: "From Hollywood Beach condos to family homes near the Broadwalk \u2014 we provide fast, affordable moving services throughout Hollywood, Florida.", intro: "Affordable movers in Hollywood, FL for beach condos, family homes, and small businesses." },
   { slug: "hallandale-beach-movers", name: "Hallandale Beach", url: "https://miami-moving.com/hallandale-beach-movers", heroText: "Moving in Hallandale Beach? From luxury high-rises on the oceanfront to cozy neighborhoods inland \u2014 our team delivers every time.", intro: "Reliable Hallandale Beach movers experienced with oceanfront high-rises and residential communities." },
   { slug: "aventura-movers", name: "Aventura", url: "https://miami-moving.com/aventura-movers", heroText: "Whether you're moving into Aventura's iconic towers or relocating near the mall \u2014 our expert movers make it effortless.", intro: "Trusted Aventura movers for Williams Island, Turnberry, Porto Vita, and other luxury high-rises." },
@@ -39,7 +39,7 @@ var businessInfo = {
   address: "1221 Brickell Ave, Suite 900, Miami, FL 33131",
   hours: "8 AM \u2013 10 PM, 7 days a week",
   website: "https://miami-moving.com",
-  serviceAreaSummary: "All of South Florida, including Miami-Dade, Broward, and Palm Beach counties."
+  serviceAreaSummary: "Local moves within Miami-Dade, Broward, and Palm Beach counties in South Florida."
 };
 
 // src/lib/mcp/tools/list_services.ts

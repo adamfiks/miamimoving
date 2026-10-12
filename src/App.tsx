@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Index from "./pages/Index";
@@ -13,6 +13,7 @@ import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
 import RouteSEO from "./components/SEOHead";
 import { services as serviceData } from "./data/serviceData";
+import { retiredRoutes } from "./lib/redirects";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,9 @@ const App = () => (
       <RouteSEO />
       <Routes>
         <Route path="/" element={<Index />} />
+        {retiredRoutes.map((r) => (
+          <Route key={r.from} path={r.from} element={<Navigate to={r.to} replace />} />
+        ))}
         {serviceData.map((s) => (
           <Route key={s.slug} path={`/${s.slug}`} element={<ServicePage />} />
         ))}

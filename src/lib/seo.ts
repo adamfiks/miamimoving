@@ -14,7 +14,7 @@ export const HOME_DESCRIPTION =
   "Miami Moving offers reliable local residential and commercial moving services across Miami & South Florida. Licensed, insured movers. Call (786) 564-0471 for a free quote.";
 export const BLOG_TITLE = "South Florida Moving Tips & Resources | Miami Moving Blog";
 export const BLOG_DESCRIPTION =
-  "Moving tips, cost guides, and neighborhood insights for anyone moving in, out of, or across South Florida — from the team at Miami Moving.";
+  "Moving tips, cost guides, and neighborhood insights for anyone moving within South Florida — from the team at Miami Moving.";
 
 type JsonLd = Record<string, unknown>;
 
@@ -166,7 +166,7 @@ export function getRouteSeo(pathname: string): RouteSeo {
           description: service.metaDescription,
           url,
           provider: { "@id": BUSINESS_ID },
-          areaServed: { "@type": "State", name: "Florida" },
+          areaServed: ["Miami-Dade", "Broward", "Palm Beach"].map((name) => ({ "@type": "AdministrativeArea", name: `${name} County, Florida` })),
         },
         breadcrumbSchema([HOME_CRUMB, { name: service.title, url }]),
       ],
