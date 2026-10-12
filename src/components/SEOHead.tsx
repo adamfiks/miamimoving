@@ -29,10 +29,8 @@ const RouteSEO = () => {
     setMeta("description", seo.description);
     setMeta("og:title", seo.title, "property");
     setMeta("og:description", seo.description, "property");
-    setMeta("og:image", seo.ogImage, "property");
     setMeta("twitter:title", seo.title);
     setMeta("twitter:description", seo.description);
-    setMeta("twitter:image", seo.ogImage);
 
     const robots = document.querySelector('meta[name="robots"]');
     if (seo.noindex) setMeta("robots", "noindex");
