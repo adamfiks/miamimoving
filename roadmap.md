@@ -1,8 +1,9 @@
 # Phase 5
-- [ ] Add eight distinct local area pages and relevant links on existing cities.
-- [ ] Add county-grouped service-areas hub, homepage/nav links, and llms.txt.
-- [ ] Add two practical condo/weather articles and aligned route metadata/schema.
-- [ ] Validate counts, sentence overlap, sitemap, tests, and desktop/mobile pages without sending a quote.
+- [x] Add eight distinct local area pages and relevant links on existing cities.
+- [x] Add county-grouped service-areas hub, homepage/nav links, and llms.txt.
+- [x] Add two practical condo/weather articles and aligned route metadata/schema.
+- [x] Validate all 43 server-rendered routes, sentence overlap, sitemap, 21 tests, contextual links and desktop/mobile pages without sending a quote. Automatic compilation passed; existing editor ref warnings remain.
+- [ ] Confirm full production prerender output after publishing; production artifacts are unavailable in this workspace.
 
 # Phase 4
 - [x] Deepen homepage with 382 words and nine FAQs without changing the hero or forms; service-areas hub link deferred to Phase 5.
