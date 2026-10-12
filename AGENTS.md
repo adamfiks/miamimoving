@@ -6,6 +6,7 @@
 - Components must render identically on server and client: no `window`/`document` during render, dates formatted with an explicit timeZone, browser-only logic in effects.
 - FAQ accordions use `forceMount` so answers are in the prerendered HTML; FAQPage schema is generated from the same data the page renders.
 - City FAQs are stored on each city data object and returned unchanged by `getCityFaqs`, keeping city-specific visible answers and schema aligned without name-swapped templates.
+- Service guides, checklists, area links, and FAQs live in `src/data/serviceContent.ts` and merge into serviceData; the service page and SEO read the same merged object to keep rendered content and schema aligned.
 - No `aggregateRating` in self-served schema (Google review-snippet policy).
 - New routes must be added to `getIndexableRoutes()` in `src/lib/seo.ts` so they are prerendered and listed in the sitemap.
 - Retired service URLs are defined in `src/lib/redirects.ts`; generate noindex static redirect documents and matching client redirects, never sitemap entries, because hosting does not process custom redirect configuration.

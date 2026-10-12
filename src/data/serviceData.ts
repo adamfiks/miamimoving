@@ -1,6 +1,7 @@
 import { Truck, Building2, Home, Package, Star, Warehouse } from "lucide-react";
+import { serviceContent, type ServiceContent } from "./serviceContent";
 
-export interface ServiceInfo {
+export interface ServiceInfo extends ServiceContent {
   slug: string;
   icon: typeof Truck;
   title: string;
@@ -12,13 +13,9 @@ export interface ServiceInfo {
   intro: string;
   benefits: string[];
   trustSignals: string[];
-  detailedContent: {
-    heading: string;
-    text: string;
-  }[];
 }
 
-export const services: ServiceInfo[] = [
+const baseServices = [
   {
     slug: "local-moving",
     icon: Truck,
@@ -254,6 +251,26 @@ export const services: ServiceInfo[] = [
     ],
   },
 ];
+
+export const services: ServiceInfo[] = [
+  ...baseServices,
+  {
+    slug: "condo-high-rise-moving",
+    icon: Building2,
+    title: "Condo & High-Rise Moving",
+    shortDescription: "Local condo and apartment moves with planning for elevators, building access, and furniture protection.",
+    heroText: "Moving between towers? Let us help you organize the moving work around your building reservations, protect your furniture, and settle into your new space.",
+    benefits: [
+      "Moving plans informed by your building access requirements",
+      "Certificates of insurance provided when requested",
+      "Furniture wrapping, disassembly, and reassembly as needed",
+      "Discussed protection for lobbies, hallways, and elevators",
+      "Careful loading, unloading, and placement at your new home",
+      "Packing support available for your condo move",
+    ],
+    trustSignals: ["Licensed and fully insured", "Transparent pricing with no hidden fees", "Local South Florida moving crews"],
+  },
+].map((service) => ({ ...service, ...serviceContent[service.slug] }));
 
 export const getServiceBySlug = (slug: string): ServiceInfo | undefined =>
   services.find((s) => s.slug === slug);
