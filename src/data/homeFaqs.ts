@@ -1,42 +1,38 @@
 export const homeFaqs = [
   {
-    question: "How much does a local move cost?",
-    answer:
-      "Local move costs depend on factors like the number of rooms, distance, and additional services (packing, disassembly). We offer free, no-obligation estimates — call us or fill out our quote form for an accurate price.",
+    question: "How much do movers cost in Miami?",
+    answer: "The cost depends on how much you are moving, the crew and time needed, access at both locations, and services such as packing. Stairs, elevator waits, and loading distance also affect the work. Request a free quote with your moving details or call (786) 564-0471 to discuss your move.",
   },
   {
-    question: "Can you help with short-notice moves?",
-    answer:
-      "We can help with short-notice moves when our schedule allows. Call us at (786) 564-0471 to check availability and discuss your move.",
+    question: "How far ahead should I book my move?",
+    answer: "Contact us as soon as you know your preferred date, especially if your building has limited moving hours or you need a weekend. Booking ahead gives you time to organize access and packing. We also help with short-notice moves when our schedule allows; call to check availability.",
   },
   {
-    question: "Are my belongings insured during the move?",
-    answer:
-      "Absolutely. We are fully licensed and insured. Basic coverage is included with every move, and additional full-value protection is available for an extra fee.",
+    question: "Do you move condos, apartments, and high-rises?",
+    answer: "Yes. We handle local condo, apartment, and high-rise moves, including furniture protection and loading and unloading. Share the floor, elevator access, parking arrangements, and building moving hours at both addresses. Reserve any required service elevators with management before moving day.",
   },
   {
-    question: "How should I prepare for my move?",
-    answer:
-      "We recommend decluttering, labeling boxes, securing valuables separately, and ensuring clear pathways. Our team also offers full packing services if you'd prefer to leave it to the pros.",
+    question: "Can you provide a certificate of insurance for my building?",
+    answer: "Yes, we provide a certificate of insurance when requested. Ask management for its insurance requirements and the details it needs on the certificate, then send those to us ahead of your move. Requirements and approval times vary by building, so arranging this early helps avoid delays.",
   },
   {
-    question: "What areas do you serve?",
-    answer:
-      "We handle local moves within Miami-Dade, Broward, and Palm Beach counties, including Miami, Fort Lauderdale, Boca Raton, Hollywood, Aventura, West Palm Beach, and surrounding areas. Contact us if you're unsure — we likely cover your area.",
+    question: "Do you offer packing and unpacking services?",
+    answer: "Yes. You can request packing for your entire home or office, or help with selected items such as glassware, artwork, and electronics. Tell us what you would like packed and whether you need unpacking at the destination so materials, timing, and scope can be discussed in your quote.",
   },
   {
-    question: "Can you move specialty items like pianos or artwork?",
-    answer:
-      "Yes, our team is trained and equipped to handle specialty items including pianos, fine art, antiques, and large appliances with the utmost care.",
+    question: "Do you offer storage between moves?",
+    answer: "Yes, we offer secure storage options alongside local moving services. Share the items you need to store and your expected timeline. Our team will discuss packing, pickup, storage arrangements, access, and delivery so you can plan the gap between leaving one space and entering the next.",
   },
   {
-    question: "What's your cancellation policy?",
-    answer:
-      "We understand plans change. You can cancel or reschedule your move up to 48 hours before the scheduled date at no charge.",
+    question: "What areas do your local movers serve?",
+    answer: "We handle local moves within Miami-Dade, Broward, and Palm Beach counties, including Miami, Miami Beach, Aventura, Fort Lauderdale, Hollywood, Boca Raton, and West Palm Beach. Tell us your pickup and delivery addresses so we can confirm the arrangements for your South Florida move.",
   },
   {
-    question: "Do you provide packing materials?",
-    answer:
-      "Yes, we provide professional-grade packing materials including boxes, bubble wrap, packing paper, and tape. These can be included as part of our packing service or purchased separately.",
+    question: "Are you licensed and fully insured?",
+    answer: "Yes, Miami Moving is licensed and fully insured. If your property manager requires insurance paperwork, share the requirements with us before moving day. For questions about protection for particular belongings and the coverage that applies to your move, speak with our team before booking.",
+  },
+  {
+    question: "Do you move offices and businesses?",
+    answer: "Yes. We provide commercial and office moving within South Florida, including office furniture, equipment, and boxed files. Share your inventory, building access, and preferred schedule so we can discuss a moving plan. Clear labels and an agreed destination layout help your team settle into the new workspace.",
   },
 ];
