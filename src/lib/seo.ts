@@ -4,6 +4,7 @@ import { cities, getCityBySlug, getCityFaqs } from "@/data/cityData";
 import { services, getServiceBySlug } from "@/data/serviceData";
 import { blogPosts, getBlogPostBySlug } from "@/data/blogData";
 import { homeFaqs } from "@/data/homeFaqs";
+import { serviceAreasContent } from "@/data/serviceAreas";
 
 export const SITE_URL = "https://miami-moving.com";
 export const BUSINESS_ID = `${SITE_URL}/#business`;
@@ -111,6 +112,22 @@ export function getRouteSeo(pathname: string): RouteSeo {
     };
   }
 
+  if (path === "/service-areas") {
+    const url = `${SITE_URL}/service-areas`;
+    return {
+      title: serviceAreasContent.title,
+      description: serviceAreasContent.description,
+      canonical: url,
+      ogImage: DEFAULT_OG_IMAGE,
+      jsonLd: [
+        businessSchema(),
+        { "@context": "https://schema.org", "@type": "CollectionPage", name: serviceAreasContent.h1, url, about: { "@id": BUSINESS_ID }, hasPart: cities.map((city) => ({ "@type": "WebPage", name: city.h1, url: `${SITE_URL}/${city.slug}` })) },
+        breadcrumbSchema([HOME_CRUMB, { name: "Service Areas", url }]),
+        faqSchema(serviceAreasContent.faqs),
+      ],
+    };
+  }
+
   if (path === "/blog") {
     const url = `${SITE_URL}/blog`;
     return {
@@ -150,6 +167,7 @@ export function getRouteSeo(pathname: string): RouteSeo {
           url,
         },
         breadcrumbSchema([HOME_CRUMB, { name: "Blog", url: `${SITE_URL}/blog` }, { name: post.title, url }]),
+        ...(post.faqs ? [faqSchema(post.faqs)] : []),
       ],
     };
   }
@@ -208,6 +226,7 @@ export function getIndexableRoutes(): { path: string; changefreq: string; priori
     ...services.map((s) => ({ path: `/${s.slug}`, changefreq: "monthly", priority: "0.9" })),
     ...cities.map((c) => ({ path: `/${c.slug}`, changefreq: "monthly", priority: "0.8" })),
     { path: "/blog", changefreq: "weekly", priority: "0.7" },
+    { path: "/service-areas", changefreq: "monthly", priority: "0.8" },
     ...blogPosts.map((p) => ({ path: `/blog/${p.slug}`, changefreq: "monthly", priority: "0.6" })),
   ];
 }
