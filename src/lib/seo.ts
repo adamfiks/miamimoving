@@ -61,6 +61,7 @@ export const businessSchema = (overrides: JsonLd = {}): JsonLd => ({
       "@type": "Offer",
       itemOffered: { "@type": "Service", name: service.title, url: `${SITE_URL}/${service.slug}` },
     })),
+  },
   ...overrides,
 });
 
