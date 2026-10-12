@@ -12,7 +12,7 @@ const images = [
   { src: gallery1, alt: "Miami Moving professional packing services for residential relocation in South Florida" },
   { src: gallery2, alt: "Miami Moving truck ready for local home move in Brickell Miami FL" },
   { src: gallery3, alt: "Experienced Miami movers carefully carrying furniture during a residential move" },
-  { src: gallery4, alt: "Secure climate-controlled storage solutions by Miami Moving in Fort Lauderdale area" },
+  { src: gallery4, alt: "Secure storage options by Miami Moving in Fort Lauderdale area" },
   { src: gallery5, alt: "Happy family after a stress-free move with Miami Moving company" },
   { src: gallery6, alt: "Commercial office relocation services in downtown Miami by Miami Moving" },
 ];
@@ -38,7 +38,7 @@ const GallerySection = () => {
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             Every move is handled with care, precision, and a smile. Here's a
-            glimpse of what we do best.
+            glimpse of our moving services.
           </p>
         </motion.div>
 

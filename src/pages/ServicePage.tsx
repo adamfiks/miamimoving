@@ -83,7 +83,7 @@ const ServicePage = () => {
                 { icon: Shield, title: "Licensed & Insured", desc: "Fully licensed and insured for your peace of mind on every move." },
                 { icon: Truck, title: "Experienced Crews", desc: "Professional movers trained in careful handling of furniture and valuables." },
                 { icon: Clock, title: "Transparent Pricing", desc: "Honest rates with no hidden fees or surprise charges." },
-                { icon: Package, title: "Careful Handling", desc: "Premium packing materials and techniques to protect every item." },
+                { icon: Package, title: "Careful Handling", desc: "Protective packing materials and techniques to protect every item." },
               ].map((item, i) => (
                 <motion.div
                   key={item.title}
