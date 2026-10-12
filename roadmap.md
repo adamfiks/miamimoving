@@ -1,3 +1,9 @@
+# Phase 5
+- [ ] Add eight distinct local area pages and relevant links on existing cities.
+- [ ] Add county-grouped service-areas hub, homepage/nav links, and llms.txt.
+- [ ] Add two practical condo/weather articles and aligned route metadata/schema.
+- [ ] Validate counts, sentence overlap, sitemap, tests, and desktop/mobile pages without sending a quote.
+
 # Phase 4
 - [x] Deepen homepage with 382 words and nine FAQs without changing the hero or forms; service-areas hub link deferred to Phase 5.
 - [x] Expand six service pages and add condo/high-rise moving with aligned FAQ schema, catalog and dynamic navigation links.
