@@ -4,6 +4,8 @@ import { ArrowLeft, Calendar, Clock, Phone } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getBlogPostBySlug } from "@/data/blogData";
+import { ContentText } from "@/components/ContentText";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const formatDate = (iso: string) =>
   new Date(iso).toLocaleDateString("en-US", {
@@ -58,11 +60,18 @@ const BlogPost = () => {
                 <h2 className="font-display font-bold text-2xl md:text-3xl text-foreground mb-4">
                   {section.heading}
                 </h2>
-                <p className="text-muted-foreground text-lg leading-relaxed">
-                  {section.text}
-                </p>
+                <ContentText text={section.text} className="text-muted-foreground text-lg leading-relaxed" />
               </div>
             ))}
+            {post.faqs && <div className="mt-12">
+              <h2 className="font-display font-bold text-2xl md:text-3xl text-foreground mb-6">Frequently Asked Questions</h2>
+              <Accordion type="single" collapsible>
+                {post.faqs.map((faq, index) => <AccordionItem key={faq.question} value={`faq-${index}`}>
+                  <AccordionTrigger className="text-left font-semibold text-foreground">{faq.question}</AccordionTrigger>
+                  <AccordionContent forceMount className="text-muted-foreground leading-relaxed">{faq.answer}</AccordionContent>
+                </AccordionItem>)}
+              </Accordion>
+            </div>}
           </div>
         </article>
 

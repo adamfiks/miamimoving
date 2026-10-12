@@ -8,6 +8,7 @@ export interface BlogPost {
   publishDate: string;
   readTime: string;
   content: { heading: string; text: string }[];
+  faqs?: { question: string; answer: string }[];
   relatedLinks: { label: string; href: string }[];
 }
 
