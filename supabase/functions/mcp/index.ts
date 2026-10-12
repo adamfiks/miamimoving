@@ -10,12 +10,12 @@ import { defineTool } from "npm:@lovable.dev/mcp-js@0.22.2";
 
 // src/lib/mcp/data.ts
 var mcpServices = [
-  { slug: "local-moving", title: "Local Moving", shortDescription: "Fast, reliable local moves within Miami-Dade, Broward, and Palm Beach counties. Same-day availability.", url: "https://miami-moving.com/local-moving" },
+  { slug: "local-moving", title: "Local Moving", shortDescription: "Local moves within Miami-Dade, Broward, and Palm Beach counties. Short-notice moves when our schedule allows.", url: "https://miami-moving.com/local-moving" },
   { slug: "commercial-moving", title: "Commercial Moving", shortDescription: "Minimize business downtime with our efficient office and commercial relocation services.", url: "https://miami-moving.com/commercial-moving" },
   { slug: "residential-moving", title: "Residential Moving", shortDescription: "From studios to mansions \u2014 we treat your home and belongings with the utmost care.", url: "https://miami-moving.com/residential-moving" },
-  { slug: "packing-and-unpacking", title: "Packing & Unpacking", shortDescription: "Professional packing with premium materials. We handle fragile items, artwork, and electronics.", url: "https://miami-moving.com/packing-and-unpacking" },
-  { slug: "white-glove-moving", title: "White Glove Moving", shortDescription: "Premium, full-service moving with extra care for high-value items and luxury homes.", url: "https://miami-moving.com/white-glove-moving" },
-  { slug: "storage-solutions", title: "Storage Solutions", shortDescription: "Secure, climate-controlled short-term and long-term storage at competitive rates.", url: "https://miami-moving.com/storage-solutions" }
+  { slug: "packing-and-unpacking", title: "Packing & Unpacking", shortDescription: "Professional packing with protective materials for fragile items, artwork, and electronics.", url: "https://miami-moving.com/packing-and-unpacking" },
+  { slug: "white-glove-moving", title: "White Glove Moving", shortDescription: "Full-service local moving with extra care for high-value items and homes.", url: "https://miami-moving.com/white-glove-moving" },
+  { slug: "storage-solutions", title: "Storage Solutions", shortDescription: "Secure storage options for short-term and long-term moving needs.", url: "https://miami-moving.com/storage-solutions" }
 ];
 var mcpCities = [
   { slug: "miami-movers", name: "Miami", url: "https://miami-moving.com/miami-movers", heroText: "Whether you're relocating across Brickell, moving into a Wynwood loft, or leaving Coral Gables for a new chapter \u2014 our Miami moving crew handles it all with care.", intro: "Professional movers serving Miami \u2014 high-rise condos, single-family homes, offices, and everything in between." },
@@ -39,7 +39,7 @@ var businessInfo = {
   address: "1221 Brickell Ave, Suite 900, Miami, FL 33131",
   hours: "8 AM \u2013 10 PM, 7 days a week",
   website: "https://miami-moving.com",
-  serviceAreaSummary: "All of South Florida, including Miami-Dade, Broward, and Palm Beach counties."
+  serviceAreaSummary: "Local moves within Miami-Dade, Broward, and Palm Beach counties in South Florida."
 };
 
 // src/lib/mcp/tools/list_services.ts
